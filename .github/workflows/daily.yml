@@ -1,0 +1,42 @@
+name: Daily Job Tracker
+
+on:
+  schedule:
+    - cron: '0 6 * * 1-5'  # 8h00 Paris (UTC+2), lundi-vendredi
+  workflow_dispatch:         # permet de lancer manuellement
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests groq python-docx
+
+      - name: Fetch jobs from France Travail
+        env:
+          FT_CLIENT_ID: ${{ secrets.FT_CLIENT_ID }}
+          FT_CLIENT_SECRET: ${{ secrets.FT_CLIENT_SECRET }}
+        run: python scripts/fetch_jobs.py
+
+      - name: Score jobs with AI
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python scripts/score_jobs.py
+
+      - name: Generate dashboard
+        run: python scripts/generate_dashboard.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
