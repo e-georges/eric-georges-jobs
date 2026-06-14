@@ -1,15 +1,12 @@
-import requests
-import json
-import os
-from datetime import datetime
-
 def get_ft_token():
     client_id = os.environ["FT_CLIENT_ID"]
     client_secret = os.environ["FT_CLIENT_SECRET"]
     
     response = requests.post(
-        "https://entreprise.francetravail.fr/connexion/oauth2/access_token",
-        params={"realm": "/partenaire"},
+        "https://entreprise.francetravail.fr/connexion/oauth2/access_token?realm=%2Fpartenaire",
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
         data={
             "grant_type": "client_credentials",
             "client_id": client_id,
@@ -17,8 +14,14 @@ def get_ft_token():
             "scope": "api_offresdemploiv2 o2dsoffre"
         }
     )
-    return response.json()["access_token"]
-
+    
+    result = response.json()
+    print(f"Token response: {result}")  # debug temporaire
+    
+    if "access_token" not in result:
+        raise Exception(f"Erreur token France Travail : {result}")
+    
+    return result["access_token"]
 def fetch_jobs(token):
     headers = {"Authorization": f"Bearer {token}"}
     
