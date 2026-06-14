@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Candidatures — Eric Georges</title>
+<style>
+  :root { --navy: #1A3C5E; --gold: #C5A028; --green: #1D5C2E; --bordeaux: #8B1A1A; --indigo: #2C2C6E; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f4f8; color: #1a1a2e; }
+  .header { background: linear-gradient(135deg, #1A3C5E 0%, #0d2438 100%); color: white; padding: 2rem 2.5rem 1.5rem; border-bottom: 4px solid #C5A028; }
+  .header h1 { font-size: 2rem; font-weight: 800; }
+  .header h1 span { color: #C5A028; }
+  .header-sub { font-size: 0.9rem; opacity: 0.8; margin-top: 0.3rem; }
+  .header-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; }
+  .date-badge { background: rgba(197,160,40,0.2); border: 1px solid #C5A028; border-radius: 6px; padding: 0.4rem 0.9rem; font-size: 0.8rem; color: #C5A028; }
+  .stats { display: flex; gap: 1.5rem; padding: 1rem 2.5rem; background: white; border-bottom: 1px solid #dde; flex-wrap: wrap; }
+  .stat { font-size: 0.85rem; }
+  .stat strong { font-size: 1.1rem; }
+  main { max-width: 1300px; margin: 0 auto; padding: 1.5rem; }
+  .section-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #888; margin: 1.8rem 0 0.8rem; border-left: 3px solid #C5A028; padding-left: 0.6rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1.2rem; }
+  .card { background: white; border-radius: 12px; padding: 1.4rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 5px solid #1A3C5E; position: relative; transition: transform 0.15s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+  .score-badge { position: absolute; top: 1rem; right: 1rem; padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; color: white; }
+  .card-header { display: flex; gap: 0.8rem; margin-bottom: 0.8rem; padding-right: 8rem; }
+  .card-icon { font-size: 1.5rem; }
+  .card-title { font-size: 1rem; font-weight: 700; line-height: 1.3; }
+  .card-company { font-size: 0.85rem; color: #555; margin-top: 0.2rem; }
+  .card-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.8rem 0; }
+  .tag { background: #F5F7FA; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.72rem; color: #444; }
+  .card-body { font-size: 0.83rem; color: #555; line-height: 1.5; margin-bottom: 0.9rem; border-top: 1px solid #eee; padding-top: 0.7rem; }
+  .card-cv { font-size: 0.78rem; background: #f0f4f8; border-radius: 6px; padding: 0.4rem 0.7rem; margin-bottom: 0.8rem; color: #1A3C5E; font-weight: 600; }
+  .card-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; padding: 0.45rem 0.9rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; cursor: pointer; border: none; }
+  .btn-primary { background: #1A3C5E; color: white; }
+  .btn-outline { background: transparent; border: 1.5px solid #ccc; color: #444; }
+  .status-select { font-size: 0.75rem; padding: 0.3rem 0.5rem; border-radius: 5px; border: 1.5px solid #ddd; cursor: pointer; background: white; }
+  .notes-area { width: 100%; margin-top: 0.6rem; padding: 0.5rem; border-radius: 6px; border: 1.5px solid #ddd; font-size: 0.8rem; resize: vertical; min-height: 50px; display: none; font-family: inherit; }
+  .notes-area.visible { display: block; }
+  .linkedin-section { background: white; border-radius: 12px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-top: 4px solid #0077B5; }
+  .linkedin-section h3 { color: #0077B5; font-size: 0.9rem; margin-bottom: 0.8rem; font-weight: 700; }
+  .linkedin-links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .linkedin-link { background: #0077B5; color: white; padding: 0.4rem 0.9rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
+  .linkedin-link:hover { background: #005582; }
+  .empty { text-align:center; color:#aaa; padding:2rem; font-size:0.9rem; }
+</style>
+</head>
+<body>
+<div class="header"><div class="header-top"><div><h1>Dashboard <span>Candidatures</span></h1><div class="header-sub">Eric Georges · Consultant ITSM Senior · Systeme Cyborg</div></div><div class="date-badge">Mis a jour le 2026-06-14 a 22:10</div></div></div>
+<div class="stats"><div class="stat">Total <strong>0</strong> offres</div><div class="stat">Top Match <strong style="color:#1D5C2E">0</strong></div><div class="stat">Bon Match <strong style="color:#C5A028">0</strong></div><div class="stat">Aujourd'hui <strong>14/06/2026</strong></div></div>
+<main>
+<div class="linkedin-section"><h3>Recherches LinkedIn du jour — offres des 24 dernieres heures</h3><div class="linkedin-links"><a class="linkedin-link" href="https://www.linkedin.com/jobs/search/?keywords=head+of+ITSM+paris&location=Paris&f_TPR=r86400" target="_blank">Head of ITSM Paris</a><a class="linkedin-link" href="https://www.linkedin.com/jobs/search/?keywords=servicenow+consultant+senior+paris&location=Paris&f_TPR=r86400" target="_blank">ServiceNow Consultant Senior</a><a class="linkedin-link" href="https://www.linkedin.com/jobs/search/?keywords=IT+governance+manager+paris&location=Paris&f_TPR=r86400" target="_blank">IT Governance Manager</a><a class="linkedin-link" href="https://www.linkedin.com/jobs/search/?keywords=DSI+transformation+freelance+paris&location=Paris&f_TPR=r86400" target="_blank">DSI Transformation Freelance</a><a class="linkedin-link" href="https://www.linkedin.com/jobs/search/?keywords=ITIL+expert+paris&location=Paris&f_TPR=r86400" target="_blank">ITIL Expert Paris</a></div></div>
+<div class="section-label">Top Match — Score 70/100 et plus (0 offres)</div><div class="grid"><div class="empty">Aucune offre top match aujourd'hui</div></div>
+<div class="section-label">Bon Match — Score 40 a 69/100 (0 offres)</div><div class="grid"><div class="empty">Aucune offre dans cette categorie</div></div>
+<div class="section-label">Faible pertinence — Score inferieur a 40/100</div><div class="grid"><div class="empty">Aucune offre dans cette categorie</div></div>
+</main>
+<script>
+function updateStatus(id, value) {
+  try { localStorage.setItem('status_' + id, value); } catch(e) {}
+}
+function toggleNote(id) {
+  var area = document.getElementById('notes' + id);
+  if(area) area.classList.toggle('visible');
+}
+function saveNote(id, value) {
+  try { localStorage.setItem('note_' + id, value); } catch(e) {}
+}
+(function() {
+  try {
+    document.querySelectorAll('.status-select').forEach(function(sel) {
+      var match = sel.getAttribute('onchange').match(/'([^']+)'/);
+      if(match) {
+        var saved = localStorage.getItem('status_' + match[1]);
+        if(saved) sel.value = saved;
+      }
+    });
+    document.querySelectorAll('.notes-area').forEach(function(area) {
+      var id = area.id.replace('notes','');
+      var saved = localStorage.getItem('note_' + id);
+      if(saved) area.value = saved;
+    });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>
