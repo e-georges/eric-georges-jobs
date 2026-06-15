@@ -47,7 +47,7 @@ def fetch_jobs(token):
         params = {
             "motsCles": search["keywords"],
             "codeROME": search["rome"],
-            "commune": "75056",
+            "commune": "75",
             "distance": 30,
             "range": "0-14",
             "sort": "1",
