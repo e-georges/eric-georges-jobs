@@ -21,7 +21,6 @@ def get_ft_token():
 
     result = response.json()
     print(f"Token response status: {response.status_code}")
-    print(f"Token response body: {result}")
 
     if "access_token" not in result:
         raise Exception(f"Erreur token France Travail : {result}")
@@ -33,22 +32,20 @@ def fetch_jobs(token):
     headers = {"Authorization": f"Bearer {token}"}
 
     searches = [
-        {"keywords": "ITSM ServiceNow", "rome": "M1801"},
-        {"keywords": "ITIL gouvernance IT", "rome": "M1801"},
-        {"keywords": "Head IT Service Management", "rome": "M1801"},
-        {"keywords": "ServiceNow consultant", "rome": "M1802"},
-        {"keywords": "DSI transformation IT freelance", "rome": "M1801"},
+        "ITSM ServiceNow",
+        "ITIL gouvernance IT",
+        "Head IT Service Management",
+        "ServiceNow consultant",
+        "DSI transformation IT",
     ]
 
     all_jobs = []
     seen_ids = set()
 
-    for search in searches:
+    for keyword in searches:
         params = {
-            "motsCles": search["keywords"],
-            "codeROME": search["rome"],
-            "commune": "75",
-            "distance": 30,
+            "motsCles": keyword,
+            "departement": "75",
             "range": "0-14",
             "sort": "1",
         }
@@ -59,20 +56,22 @@ def fetch_jobs(token):
             params=params
         )
 
-        print(f"Search '{search['keywords']}' → status {resp.status_code}")
+        print(f"Search '{keyword}' → status {resp.status_code}")
 
         if resp.status_code == 200:
             data = resp.json()
-            for job in data.get("resultats", []):
+            resultats = data.get("resultats", [])
+            print(f"  → {len(resultats)} offres trouvees")
+            for job in resultats:
                 if job["id"] not in seen_ids:
                     seen_ids.add(job["id"])
                     all_jobs.append({
                         "id": job["id"],
                         "title": job.get("intitule", ""),
-                        "company": job.get("entreprise", {}).get("nom", "Non précisé"),
+                        "company": job.get("entreprise", {}).get("nom", "Non precise"),
                         "location": job.get("lieuTravail", {}).get("libelle", ""),
                         "contract": job.get("typeContratLibelle", ""),
-                        "salary": job.get("salaire", {}).get("libelle", "Non précisé"),
+                        "salary": job.get("salaire", {}).get("libelle", "Non precise"),
                         "description": job.get("description", "")[:800],
                         "url": job.get("origineOffre", {}).get("urlOrigine",
                                f"https://candidat.francetravail.fr/offres/emploi/detail/{job['id']}"),
@@ -81,10 +80,13 @@ def fetch_jobs(token):
                         "score": 0,
                         "cv_recommended": "",
                         "ai_summary": "",
+                        "title_rewrite": "",
+                        "tagline_rewrite": "",
+                        "profile_rewrite": "",
                         "status": "new"
                     })
         else:
-            print(f"Erreur recherche : {resp.text[:200]}")
+            print(f"  → Erreur : {resp.text[:200]}")
 
     return all_jobs
 
