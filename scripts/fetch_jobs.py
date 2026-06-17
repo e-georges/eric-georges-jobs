@@ -37,6 +37,11 @@ def fetch_jobs(token):
         "Head IT Service Management",
         "ServiceNow consultant",
         "DSI transformation IT",
+        "IT Service Management",
+        "responsable ITSM",
+        "gouvernance IT",
+        "transformation digitale DSI",
+        "pilotage IT",
     ]
 
     all_jobs = []
@@ -85,6 +90,8 @@ def fetch_jobs(token):
                         "profile_rewrite": "",
                         "status": "new"
                     })
+        elif resp.status_code == 204:
+            print(f"  → Aucun resultat")
         else:
             print(f"  → Erreur : {resp.text[:200]}")
 
