@@ -1,12 +1,22 @@
 import json
 import os
-import re
 from groq import Groq
 
 client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
 SCORING_PROMPT = """Tu es un expert en recrutement IT senior en France.
-Analyse cette offre d'emploi pour Eric Georges, consultant ITSM Senior (20 ans exp, ITIL Expert, ServiceNow CSA, ex-LVMH, DGAC).
+Analyse cette offre pour Eric Georges, consultant ITSM Senior (20 ans exp, ITIL Expert, ServiceNow CSA, ex-LVMH, DGAC).
+
+REGLES DE REJET STRICTES (mettre rejected a true) :
+1. CDI/CDD avec salaire annuel clairement INFERIEUR a 80 000 EUR (package inclus) -> REJETER
+2. Mission freelance avec TJM clairement INFERIEUR a 750 EUR/jour -> REJETER
+3. Si le salaire/TJM n'est PAS precise :
+   - GARDER (rejected=false) UNIQUEMENT si le poste est de niveau senior strategique :
+     Head of IT, Directeur IT, DSI, CTO, CIO, COO, IT Director, Head of ITSM,
+     Practice Director, ou tout poste dont l'IA estime de facon credible que la
+     remuneration atteindra >= 80K EUR (CDI) ou >= 750 EUR/jour (freelance)
+   - REJETER (rejected=true) si c'est un poste junior, intermediaire, technicien,
+     analyste, support, ou administrateur sans dimension strategique/management
 
 OFFRE :
 Titre : {title}
@@ -17,21 +27,21 @@ Description : {description}
 
 Reponds UNIQUEMENT en JSON valide, sans texte avant ou apres :
 {{
+  "rejected": false,
   "score": 75,
   "cv_recommended": "CDI",
-  "reasons": "Explication courte du score en 2 phrases.",
+  "reasons": "Explication courte en 2 phrases incluant l'estimation salariale.",
   "title_rewrite": "Nouveau titre adapte max 10 mots",
   "tagline_rewrite": "Nouvelle tagline max 15 mots",
   "profile_rewrite": "Nouvelle accroche profil en 3 phrases max."
 }}
 
-Criteres de scoring :
+Criteres de scoring (si non rejete) :
 - +30 pts : mots-cles ITSM, ServiceNow, ITIL, Gouvernance IT presents
-- +20 pts : seniorite Head of / Lead / Senior / Manager / Directeur
+- +20 pts : seniorite Head of / Lead / Senior / Manager / Directeur / CxO
 - +20 pts : localisation Paris / Ile-de-France / Remote
-- +15 pts : salaire >= 100K euros ou TJM >= 700 euros par jour
+- +15 pts : salaire >= 100K euros ou TJM >= 750 euros par jour
 - +15 pts : secteur luxe, banque, assurance, aero, sante, energie
-- -50 pts : hors Ile-de-France sans remote, ou TJM < 700 euros par jour
 - Mettre cv_recommended a Freelance si contrat mission/freelance/interim, sinon CDI"""
 
 
@@ -68,37 +78,20 @@ def main():
     jobs = data["jobs"]
     print(f"Scoring {len(jobs)} offres via Groq...")
 
-    scored = []
+    kept = []
+    rejected_count = 0
+
     for i, job in enumerate(jobs):
         try:
             result = score_job(job)
+
+            if result.get("rejected", False):
+                rejected_count += 1
+                print(f"[{i+1}/{len(jobs)}] REJETE : {job['title']}")
+                continue
+
             job["score"] = int(result.get("score", 0))
             job["cv_recommended"] = str(result.get("cv_recommended", "CDI"))
             job["ai_summary"] = str(result.get("reasons", ""))
             job["title_rewrite"] = str(result.get("title_rewrite", ""))
             job["tagline_rewrite"] = str(result.get("tagline_rewrite", ""))
-            job["profile_rewrite"] = str(result.get("profile_rewrite", ""))
-            print(f"[{i+1}/{len(jobs)}] {job['title']} — Score: {job['score']}/100")
-        except Exception as e:
-            print(f"Erreur sur {job['title']} : {e}")
-            job["score"] = 0
-            job["cv_recommended"] = "CDI"
-            job["ai_summary"] = ""
-            job["title_rewrite"] = ""
-            job["tagline_rewrite"] = ""
-            job["profile_rewrite"] = ""
-        scored.append(job)
-
-    scored.sort(key=lambda x: x["score"], reverse=True)
-    data["jobs"] = scored
-
-    with open("data/jobs.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    top = [j for j in scored if j["score"] >= 70]
-    print(f"{len(top)} offres a fort potentiel (score >= 70)")
-    print("data/jobs.json mis a jour")
-
-
-if __name__ == "__main__":
-    main()
