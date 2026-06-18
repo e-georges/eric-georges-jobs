@@ -95,3 +95,31 @@ def main():
             job["ai_summary"] = str(result.get("reasons", ""))
             job["title_rewrite"] = str(result.get("title_rewrite", ""))
             job["tagline_rewrite"] = str(result.get("tagline_rewrite", ""))
+            job["profile_rewrite"] = str(result.get("profile_rewrite", ""))
+            print(f"[{i+1}/{len(jobs)}] {job['title']} — Score: {job['score']}/100")
+            kept.append(job)
+        except Exception as e:
+            print(f"Erreur sur {job['title']} : {e}")
+            job["score"] = 0
+            job["cv_recommended"] = "CDI"
+            job["ai_summary"] = ""
+            job["title_rewrite"] = ""
+            job["tagline_rewrite"] = ""
+            job["profile_rewrite"] = ""
+            kept.append(job)
+
+    kept.sort(key=lambda x: x["score"], reverse=True)
+    data["jobs"] = kept
+    data["total"] = len(kept)
+
+    with open("data/jobs.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    top = [j for j in kept if j["score"] >= 70]
+    print(f"\n{rejected_count} offres rejetees (salaire insuffisant ou poste non strategique)")
+    print(f"{len(kept)} offres conservees dont {len(top)} a fort potentiel")
+    print("data/jobs.json mis a jour")
+
+
+if __name__ == "__main__":
+    main()
