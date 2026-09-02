@@ -117,10 +117,37 @@ def build(modules):
     for asset in ("styles.css", "app.js"):
         shutil.copyfile(os.path.join(APP_DIR, asset), os.path.join(OUT_DIR, asset))
 
+    write_standalone(html, payload)
+
     # Empeche Jekyll de filtrer les fichiers sur GitHub Pages.
     open(os.path.join(OUT_DIR, ".nojekyll"), "w").close()
 
     return curriculum
+
+
+def write_standalone(html, payload):
+    """Ecrit output/standalone.html : l'application entiere dans un seul fichier.
+
+    Pratique pour l'ouvrir hors ligne, l'envoyer par email ou la copier sur cle USB.
+    """
+    with open(os.path.join(APP_DIR, "styles.css"), "r", encoding="utf-8") as f:
+        css = f.read()
+    with open(os.path.join(APP_DIR, "app.js"), "r", encoding="utf-8") as f:
+        js = f.read()
+
+    single = html.replace(
+        '<link rel="stylesheet" href="styles.css">',
+        "<style>\n" + css + "\n</style>",
+    ).replace(
+        '<script src="curriculum.js"></script>\n<script src="app.js"></script>',
+        "<script>window.CURRICULUM=" + payload + ";</script>\n<script>\n" + js + "\n</script>",
+    )
+
+    if "<style>" not in single or "window.CURRICULUM" not in single:
+        sys.exit("Le gabarit app/index.html ne correspond plus a write_standalone().")
+
+    with open(os.path.join(OUT_DIR, "standalone.html"), "w", encoding="utf-8") as f:
+        f.write(single)
 
 
 def summarise(curriculum):

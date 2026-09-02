@@ -607,13 +607,13 @@
         rows + "</table></div>" +
       '<div class="section-label">Vos données</div>' +
       '<div class="panel"><p class="muted" style="margin-bottom:.8rem">Toute votre progression est stockée dans ce navigateur uniquement. ' +
-        "Exportez-la pour la conserver ou la transférer sur un autre appareil.</p>" +
+        "Copiez-la pour la conserver ou la transférer sur un autre appareil.</p>" +
         '<div class="mod-meta">' +
           '<button class="btn btn-primary" onclick="eawExport()">Exporter ma progression</button>' +
-          '<button class="btn btn-ghost" onclick="document.getElementById(\'imp\').click()">Importer un fichier</button>' +
+          '<button class="btn btn-ghost" onclick="eawShowImport()">Importer une sauvegarde</button>' +
           '<button class="btn btn-ghost" onclick="eawReset()">Tout réinitialiser</button>' +
         "</div>" +
-        '<input type="file" id="imp" accept="application/json" style="display:none" onchange="eawImport(this)">' +
+        '<div id="io"></div>' +
       "</div>";
   }
 
@@ -621,28 +621,84 @@
     return '<div class="stat-box"><div class="n">' + esc(n) + '</div><div class="l">' + esc(label) + "</div></div>";
   }
 
+  function ioArea(label, value, actions) {
+    return '<div style="margin-top:1rem">' +
+      '<div class="ctx" style="margin-bottom:.4rem">' + label + "</div>" +
+      '<textarea class="q-input" id="iobox" rows="6" spellcheck="false" ' +
+      'style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;resize:vertical">' +
+      esc(value) + "</textarea>" +
+      '<div class="mod-meta" style="margin-top:.6rem">' + actions + "</div>" +
+      '<div id="iomsg" class="muted" style="margin-top:.5rem"></div></div>';
+  }
+
   window.eawExport = function () {
-    var blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "english-at-work-progression-" + today() + ".json";
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    var payload = JSON.stringify(state);
+    document.getElementById("io").innerHTML = ioArea(
+      "Sauvegarde du " + today() + " — conservez ce texte",
+      payload,
+      '<button class="btn btn-primary" onclick="eawCopy()">Copier</button>' +
+      '<button class="btn btn-ghost" onclick="eawCloseIo()">Fermer</button>'
+    );
+    var box = document.getElementById("iobox");
+    box.readOnly = true;
+    box.focus(); box.select();
   };
 
-  window.eawImport = function (input) {
-    var file = input.files && input.files[0];
-    if (!file) return;
-    var reader = new FileReader();
-    reader.onload = function () {
-      try {
-        var parsed = JSON.parse(reader.result);
-        var base = defaultState();
-        for (var k in base) if (parsed[k] !== undefined) base[k] = parsed[k];
-        state = base; save(); route(); renderChrome();
-        alert("Progression importée.");
-      } catch (e) { alert("Fichier illisible."); }
-    };
-    reader.readAsText(file);
+  window.eawCopy = function () {
+    var box = document.getElementById("iobox");
+    var msg = document.getElementById("iomsg");
+    box.select();
+    box.setSelectionRange(0, box.value.length);
+    var done = false;
+    try { done = document.execCommand("copy"); } catch (e) {}
+    if (done) {
+      msg.textContent = "Sauvegarde copiée dans le presse-papier.";
+      return;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(function () {
+        msg.textContent = "Sauvegarde copiée dans le presse-papier.";
+      }, function () {
+        msg.textContent = "Copie automatique refusée par le navigateur : le texte est sélectionné, utilisez Ctrl/Cmd + C.";
+      });
+    } else {
+      msg.textContent = "Le texte est sélectionné : utilisez Ctrl/Cmd + C pour le copier.";
+    }
+  };
+
+  window.eawShowImport = function () {
+    document.getElementById("io").innerHTML = ioArea(
+      "Collez ici une sauvegarde précédemment exportée",
+      "",
+      '<button class="btn btn-primary" onclick="eawImport()">Restaurer</button>' +
+      '<button class="btn btn-ghost" onclick="eawCloseIo()">Annuler</button>'
+    );
+    document.getElementById("iobox").focus();
+  };
+
+  window.eawImport = function () {
+    var box = document.getElementById("iobox");
+    var msg = document.getElementById("iomsg");
+    var parsed;
+    try { parsed = JSON.parse(box.value); }
+    catch (e) {
+      msg.textContent = "Ce texte n'est pas une sauvegarde valide. Collez le contenu obtenu via « Exporter ma progression ».";
+      return;
+    }
+    if (!parsed || typeof parsed !== "object" || typeof parsed.cards !== "object") {
+      msg.textContent = "Sauvegarde incomplète : la liste des cartes est absente.";
+      return;
+    }
+    var base = defaultState();
+    for (var k in base) if (parsed[k] !== undefined) base[k] = parsed[k];
+    state = base; save(); route(); renderChrome();
+    var restored = document.getElementById("io");
+    if (restored) restored.innerHTML = '<div class="muted" style="margin-top:1rem">Progression restaurée.</div>';
+  };
+
+  window.eawCloseIo = function () {
+    var io = document.getElementById("io");
+    if (io) io.innerHTML = "";
   };
 
   window.eawReset = function () {

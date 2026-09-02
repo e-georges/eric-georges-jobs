@@ -6,7 +6,8 @@ Pensée pour un francophone en environnement IT / conseil, avec une insistance
 particulière sur les erreurs typiques des francophones.
 
 Tout tourne dans le navigateur : pas de compte, pas de serveur, pas de clé d'API.
-La progression est enregistrée dans le `localStorage` et exportable en JSON.
+La progression est enregistrée dans le `localStorage` ; elle s'exporte et se restaure
+sous forme d'un bloc JSON copiable, pour passer d'un appareil à l'autre.
 
 ## Contenu
 
