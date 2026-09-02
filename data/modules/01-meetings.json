@@ -1,0 +1,67 @@
+{
+  "id": "meetings",
+  "title": "Réunions & conf calls",
+  "title_en": "Meetings & Conference Calls",
+  "icon": "🗣️",
+  "level": "B1 → B2",
+  "summary": "Ouvrir, animer, interrompre poliment et conclure une réunion en anglais, en présentiel comme en visio.",
+  "vocabulary": [
+    {"en": "agenda", "fr": "ordre du jour", "type": "n.", "example": "Could you circulate the agenda before Thursday?", "example_fr": "Peux-tu diffuser l'ordre du jour avant jeudi ?"},
+    {"en": "minutes", "fr": "compte rendu", "type": "n. pl.", "example": "I'll take the minutes and share them tonight.", "example_fr": "Je prends le compte rendu et je le partage ce soir."},
+    {"en": "action item", "fr": "action à mener", "type": "n.", "example": "That leaves us with three action items.", "example_fr": "Cela nous laisse trois actions à mener."},
+    {"en": "stakeholder", "fr": "partie prenante", "type": "n.", "example": "We need every stakeholder in the room for this decision.", "example_fr": "Il nous faut toutes les parties prenantes pour cette décision."},
+    {"en": "to chair a meeting", "fr": "présider / animer une réunion", "type": "v.", "example": "Sophie will chair the steering committee.", "example_fr": "Sophie animera le comité de pilotage."},
+    {"en": "to follow up", "fr": "relancer, assurer le suivi", "type": "v.", "example": "I'll follow up with the vendor by Friday.", "example_fr": "Je relance le fournisseur d'ici vendredi."},
+    {"en": "deadline", "fr": "date limite, échéance", "type": "n.", "example": "The deadline is the end of the quarter.", "example_fr": "L'échéance est la fin du trimestre."},
+    {"en": "to postpone", "fr": "reporter", "type": "v.", "example": "Can we postpone the review to next week?", "example_fr": "Peut-on reporter la revue à la semaine prochaine ?"},
+    {"en": "workaround", "fr": "solution de contournement", "type": "n.", "example": "For now we only have a workaround, not a fix.", "example_fr": "Pour l'instant nous n'avons qu'un contournement, pas un correctif."},
+    {"en": "to be on mute", "fr": "être en sourdine", "type": "v.", "example": "Marc, you're on mute.", "example_fr": "Marc, tu es en sourdine."},
+    {"en": "to drop off the call", "fr": "être déconnecté de l'appel", "type": "v.", "example": "Sorry, I dropped off the call for a minute.", "example_fr": "Désolé, j'ai été déconnecté une minute."},
+    {"en": "takeaway", "fr": "point clé à retenir", "type": "n.", "example": "The main takeaway is that we're two weeks behind.", "example_fr": "Le point clé à retenir : nous avons deux semaines de retard."},
+    {"en": "to touch base", "fr": "faire un point rapide", "type": "v.", "example": "Let's touch base on Monday morning.", "example_fr": "Faisons un point rapide lundi matin."},
+    {"en": "to run over", "fr": "déborder (sur le temps)", "type": "v.", "example": "We're running over — let's take the rest offline.", "example_fr": "Nous débordons — traitons le reste hors réunion."}
+  ],
+  "phrases": [
+    {"en": "Shall we get started? Everyone's here.", "fr": "On commence ? Tout le monde est là.", "context": "Ouvrir"},
+    {"en": "Thanks for making the time — I know your calendars are packed.", "fr": "Merci d'avoir dégagé du temps, je sais que vos agendas sont chargés.", "context": "Ouvrir"},
+    {"en": "Just to set the scene, we're here to decide on the migration date.", "fr": "Pour poser le contexte, nous sommes ici pour décider de la date de migration.", "context": "Cadrer"},
+    {"en": "Sorry to jump in, but could I add one point?", "fr": "Désolé de vous interrompre, puis-je ajouter un point ?", "context": "Interrompre poliment"},
+    {"en": "I'm not sure I follow — could you walk me through that again?", "fr": "Je ne suis pas sûr de suivre, pouvez-vous me réexpliquer ?", "context": "Faire répéter"},
+    {"en": "Let me play devil's advocate for a second.", "fr": "Permettez-moi de jouer l'avocat du diable un instant.", "context": "Objecter"},
+    {"en": "I see your point, but my concern is the cost.", "fr": "Je comprends votre point de vue, mais ma préoccupation est le coût.", "context": "Désaccord poli"},
+    {"en": "Let's park that and come back to it next week.", "fr": "Mettons cela de côté et revenons-y la semaine prochaine.", "context": "Recentrer"},
+    {"en": "So, to recap: Anna owns the test plan, I own the comms.", "fr": "Donc, pour récapituler : Anna pilote le plan de tests, moi la communication.", "context": "Conclure"},
+    {"en": "Are we all aligned on that?", "fr": "Sommes-nous tous alignés là-dessus ?", "context": "Valider"}
+  ],
+  "dialogue": {
+    "title": "Steering committee — 15 minutes",
+    "lines": [
+      {"speaker": "Claire (chair)", "en": "Right, shall we get started? Thanks for making the time. We have fifteen minutes and one decision to make.", "fr": "Bien, on commence ? Merci d'avoir dégagé du temps. Nous avons quinze minutes et une décision à prendre."},
+      {"speaker": "Éric", "en": "Sorry, before we dive in — is David joining? He owns the infrastructure.", "fr": "Pardon, avant de nous lancer : David nous rejoint ? C'est lui qui pilote l'infrastructure."},
+      {"speaker": "Claire", "en": "He sent his apologies, but he shared his input in writing. Let me share my screen.", "fr": "Il s'est excusé, mais il a envoyé sa contribution par écrit. Je partage mon écran."},
+      {"speaker": "Éric", "en": "Claire, you're on mute.", "fr": "Claire, tu es en sourdine."},
+      {"speaker": "Claire", "en": "Classic. Thanks. So, the question is whether we go live on the 14th or push to the 28th.", "fr": "Ça ne rate jamais. Merci. Donc, la question est : mise en production le 14 ou report au 28 ?"},
+      {"speaker": "Éric", "en": "I see the appeal of the 14th, but my concern is the test coverage. We're at sixty percent.", "fr": "Je vois l'intérêt du 14, mais ma préoccupation, c'est la couverture de tests. Nous sommes à soixante pour cent."},
+      {"speaker": "Claire", "en": "Fair point. What would it take to get to ninety?", "fr": "C'est juste. Que faudrait-il pour atteindre quatre-vingt-dix ?"},
+      {"speaker": "Éric", "en": "Two extra weeks and one more tester. Which lands us on the 28th anyway.", "fr": "Deux semaines de plus et un testeur supplémentaire. Ce qui nous ramène au 28 de toute façon."},
+      {"speaker": "Claire", "en": "Then let's go with the 28th. To recap: Éric secures the tester, I'll brief the business. Are we all aligned?", "fr": "Alors partons sur le 28. Pour récapituler : Éric obtient le testeur, je briefe le métier. Sommes-nous tous alignés ?"},
+      {"speaker": "Éric", "en": "Aligned. I'll follow up with a written summary this afternoon.", "fr": "Aligné. Je fais un récapitulatif écrit cet après-midi."}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "I propose you to start.", "right": "I suggest we start. / Shall we start?", "why": "« Propose somebody to do » n'existe pas. On dit suggest + that-clause, ou l'infinitif sans complément : I propose to start."},
+    {"wrong": "We will make a meeting on Monday.", "right": "We'll have / hold a meeting on Monday.", "why": "On ne « fait » pas une réunion en anglais : have, hold, ou set up."},
+    {"wrong": "I am agree with you.", "right": "I agree with you.", "why": "Agree est un verbe, pas un adjectif. Jamais « be agree »."},
+    {"wrong": "Can you repeat, please?", "right": "Could you say that again, please?", "why": "« Repeat » seul sonne sec, presque comme un ordre en réunion. Préférez say that again ou run that by me again."},
+    {"wrong": "Actually, we are 12 people.", "right": "Currently, there are 12 of us.", "why": "Actually = « en fait », pas « actuellement ». Faux ami classique."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "Votre collègue parle mais personne ne l'entend. Que dites-vous ?", "options": ["You are in silent.", "You're on mute.", "Your micro is closed.", "You are muted off."], "answer": 1, "explanation": "L'expression figée est « You're on mute » (ou « You're muted »)."},
+    {"type": "mcq", "question": "« Actually » signifie :", "options": ["actuellement", "en fait", "éventuellement", "finalement"], "answer": 1, "explanation": "Faux ami. « Actuellement » se dit currently ou at the moment."},
+    {"type": "mcq", "question": "Comment interrompre poliment ?", "options": ["Stop, I want to talk.", "Sorry to jump in, but could I add one point?", "Listen to me now.", "I cut you."], "answer": 1, "explanation": "« Sorry to jump in » est la formule standard, courtoise et professionnelle."},
+    {"type": "gap", "question": "Let's ___ base early next week to check progress.", "answer": "touch", "explanation": "To touch base = faire un point rapide."},
+    {"type": "gap", "question": "Could you circulate the ___ before the meeting so we can prepare?", "answer": "agenda", "explanation": "Agenda = ordre du jour. Attention : un agenda (le carnet) se dit diary ou planner."},
+    {"type": "mcq", "question": "« That leaves us with three action items » veut dire :", "options": ["Il nous reste trois articles.", "Il nous reste trois actions à mener.", "Nous avons trois options.", "Nous avons trois problèmes."], "answer": 1, "explanation": "Action item = tâche assignée en sortie de réunion."},
+    {"type": "gap", "question": "We're running ___ — let's take the rest offline.", "answer": "over", "explanation": "To run over = déborder sur le temps imparti."}
+  ]
+}

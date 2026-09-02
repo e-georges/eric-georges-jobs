@@ -1,0 +1,69 @@
+{
+  "id": "it-project",
+  "title": "IT, projet & agilité",
+  "title_en": "IT, Project & Agile",
+  "icon": "⚙️",
+  "level": "B1 → C1",
+  "summary": "Le vocabulaire quotidien des DSI, du support et des projets : incidents, sprints, mises en production.",
+  "vocabulary": [
+    {"en": "outage", "fr": "panne, interruption de service", "type": "n.", "example": "We had a two-hour outage last night.", "example_fr": "Nous avons eu une panne de deux heures cette nuit."},
+    {"en": "incident", "fr": "incident", "type": "n.", "example": "A major incident was declared at 9:15.", "example_fr": "Un incident majeur a été déclaré à 9h15."},
+    {"en": "root cause", "fr": "cause racine", "type": "n.", "example": "The root cause was an expired certificate.", "example_fr": "La cause racine était un certificat expiré."},
+    {"en": "to roll out", "fr": "déployer", "type": "v.", "example": "We're rolling out the new portal in March.", "example_fr": "Nous déployons le nouveau portail en mars."},
+    {"en": "to roll back", "fr": "revenir en arrière", "type": "v.", "example": "We had to roll back the release.", "example_fr": "Nous avons dû annuler la mise en production."},
+    {"en": "release", "fr": "mise en production, version", "type": "n.", "example": "The release is scheduled for Thursday night.", "example_fr": "La mise en production est prévue jeudi soir."},
+    {"en": "backlog", "fr": "liste des tâches en attente", "type": "n.", "example": "That story is still in the backlog.", "example_fr": "Cette user story est encore dans le backlog."},
+    {"en": "sprint", "fr": "itération de deux semaines", "type": "n.", "example": "We'll pick it up in the next sprint.", "example_fr": "Nous le prendrons au prochain sprint."},
+    {"en": "technical debt", "fr": "dette technique", "type": "n.", "example": "We're paying down technical debt this quarter.", "example_fr": "Nous résorbons de la dette technique ce trimestre."},
+    {"en": "downtime", "fr": "temps d'indisponibilité", "type": "n.", "example": "Planned downtime is two hours.", "example_fr": "L'indisponibilité planifiée est de deux heures."},
+    {"en": "handover", "fr": "passation, transfert", "type": "n.", "example": "The handover to run teams is on Friday.", "example_fr": "La passation aux équipes d'exploitation est vendredi."},
+    {"en": "to escalate", "fr": "faire remonter", "type": "v.", "example": "If it's not resolved in an hour, escalate to level 3.", "example_fr": "Si ce n'est pas résolu en une heure, faites remonter au niveau 3."},
+    {"en": "SLA breach", "fr": "non-respect du contrat de service", "type": "n.", "example": "That would be our third SLA breach this month.", "example_fr": "Ce serait notre troisième non-respect du SLA ce mois-ci."},
+    {"en": "bottleneck", "fr": "goulot d'étranglement", "type": "n.", "example": "Approvals are the bottleneck, not development.", "example_fr": "Les validations sont le goulot d'étranglement, pas le développement."},
+    {"en": "to onboard", "fr": "intégrer (un nouvel arrivant, un client)", "type": "v.", "example": "It takes two weeks to onboard a new supplier.", "example_fr": "Il faut deux semaines pour intégrer un nouveau fournisseur."},
+    {"en": "workload", "fr": "charge de travail", "type": "n.", "example": "The team's workload is unsustainable.", "example_fr": "La charge de travail de l'équipe n'est pas tenable."}
+  ],
+  "phrases": [
+    {"en": "We're seeing degraded performance on the production environment.", "fr": "Nous constatons des performances dégradées sur l'environnement de production.", "context": "Incident"},
+    {"en": "Can you raise a ticket so we can track it properly?", "fr": "Peux-tu créer un ticket pour qu'on puisse en assurer le suivi ?", "context": "Support"},
+    {"en": "We've restored service; the root cause analysis is still ongoing.", "fr": "Le service est rétabli ; l'analyse de cause racine est en cours.", "context": "Incident"},
+    {"en": "This is a known issue — there's a workaround in the knowledge base.", "fr": "C'est un problème connu — il y a un contournement dans la base de connaissances.", "context": "Support"},
+    {"en": "We're on track for the 28th, assuming testing goes to plan.", "fr": "Nous sommes dans les temps pour le 28, si les tests se déroulent comme prévu.", "context": "Statut projet"},
+    {"en": "We're slipping — I'd put us two weeks behind.", "fr": "Nous glissons — je nous situe deux semaines en retard.", "context": "Statut projet"},
+    {"en": "That's a nice-to-have, not a must-have.", "fr": "C'est un confort, pas une obligation.", "context": "Priorisation"},
+    {"en": "Let's take that offline and come back with a proposal.", "fr": "Traitons cela hors réunion et revenons avec une proposition.", "context": "Daily / stand-up"},
+    {"en": "I'm blocked on the firewall rule — I need networks to unblock me.", "fr": "Je suis bloqué sur la règle de pare-feu — j'ai besoin des réseaux pour me débloquer.", "context": "Daily / stand-up"},
+    {"en": "Who's the business owner for this application?", "fr": "Qui est le propriétaire métier de cette application ?", "context": "Gouvernance"}
+  ],
+  "dialogue": {
+    "title": "Major incident call",
+    "lines": [
+      {"speaker": "Incident manager", "en": "Thanks everyone for joining at short notice. We declared a P1 at 09:15: the customer portal is down for all external users.", "fr": "Merci à tous de vous être connectés dans l'urgence. Nous avons déclaré un P1 à 9h15 : le portail client est indisponible pour tous les utilisateurs externes."},
+      {"speaker": "Éric", "en": "Do we have an impact figure? How many users are affected?", "fr": "Avons-nous un chiffre d'impact ? Combien d'utilisateurs sont touchés ?"},
+      {"speaker": "Incident manager", "en": "Roughly 12,000. Sales are reporting failed transactions too.", "fr": "Environ 12 000. Les ventes remontent aussi des transactions en échec."},
+      {"speaker": "Network lead", "en": "We've ruled out the network. Latency is normal end to end.", "fr": "Nous avons écarté le réseau. La latence est normale de bout en bout."},
+      {"speaker": "App lead", "en": "It looks like the certificate on the API gateway expired overnight. That would explain the pattern.", "fr": "Il semble que le certificat de la passerelle d'API ait expiré cette nuit. Cela expliquerait le comportement observé."},
+      {"speaker": "Éric", "en": "Can we roll back to the previous release as a workaround while you renew it?", "fr": "Pouvons-nous revenir à la version précédente comme contournement pendant que vous le renouvelez ?"},
+      {"speaker": "App lead", "en": "Renewing is faster — twenty minutes. Rolling back would take over an hour.", "fr": "Le renouvellement est plus rapide : vingt minutes. Le retour arrière prendrait plus d'une heure."},
+      {"speaker": "Incident manager", "en": "Agreed, let's renew. Éric, can you handle comms to the business? We're already in SLA breach territory.", "fr": "D'accord, renouvelons. Éric, peux-tu gérer la communication au métier ? Nous sommes déjà en zone de non-respect du SLA."},
+      {"speaker": "Éric", "en": "Will do. I'll send an update every fifteen minutes until we're back up, then we'll book the root cause analysis for tomorrow.", "fr": "Je m'en occupe. J'enverrai un point toutes les quinze minutes jusqu'au rétablissement, puis nous planifierons l'analyse de cause racine pour demain."}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "The application is down since 9 o'clock.", "right": "The application has been down since 9 o'clock.", "why": "Since + present perfect, obligatoirement."},
+    {"wrong": "We must to deploy tonight.", "right": "We must deploy tonight. / We have to deploy tonight.", "why": "Must n'est jamais suivi de to."},
+    {"wrong": "I will inform you when the incident is closed.", "right": "I'll let you know when the incident is closed.", "why": "« Inform » est correct mais très formel/administratif. « Let you know » est le registre naturel."},
+    {"wrong": "The problem is resolved definitively.", "right": "The problem is permanently resolved.", "why": "Definitively = de façon décisive/concluante, pas « définitivement » au sens de durable."},
+    {"wrong": "We have a delay of two weeks.", "right": "We're two weeks behind schedule.", "why": "Delay = le fait de retarder. Un retard sur un planning = behind schedule."},
+    {"wrong": "Please make attention to the config file.", "right": "Please pay attention to the config file.", "why": "Pay attention, jamais make attention."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "« The service has been down ___ 9 a.m. »", "options": ["since", "for", "during", "from"], "answer": 0, "explanation": "Since + point de départ précis ; for + durée (for two hours)."},
+    {"type": "gap", "question": "The ___ cause was an expired certificate on the API gateway.", "answer": "root", "explanation": "Root cause = cause racine."},
+    {"type": "mcq", "question": "« To roll back a release » signifie :", "options": ["accélérer une livraison", "revenir à la version précédente", "reporter la livraison", "relancer les tests"], "answer": 1, "explanation": "Roll back = retour arrière. À ne pas confondre avec roll out = déployer."},
+    {"type": "gap", "question": "Approvals are the ___ — development is actually fast enough.", "answer": "bottleneck", "explanation": "Bottleneck = goulot d'étranglement."},
+    {"type": "mcq", "question": "Traduisez « Nous avons deux semaines de retard » :", "options": ["We have two weeks of delay.", "We're two weeks behind schedule.", "We are late of two weeks.", "We have a retard of two weeks."], "answer": 1, "explanation": "Behind schedule est l'expression idiomatique."},
+    {"type": "mcq", "question": "Quelle phrase est correcte ?", "options": ["We must to deploy tonight.", "We must deploy tonight.", "We must deploying tonight.", "We must to deploying tonight."], "answer": 1, "explanation": "Les modaux (must, can, should) sont suivis de l'infinitif sans to."},
+    {"type": "gap", "question": "If it isn't fixed within an hour, ___ it to level 3.", "answer": "escalate", "explanation": "To escalate = faire remonter."}
+  ]
+}

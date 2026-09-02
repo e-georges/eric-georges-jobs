@@ -1,0 +1,66 @@
+{
+  "id": "smalltalk",
+  "title": "Small talk & réseautage",
+  "title_en": "Small Talk & Networking",
+  "icon": "☕",
+  "level": "A2 → B2",
+  "summary": "Briser la glace, tenir une conversation informelle, se présenter en conférence et sortir d'un échange poliment.",
+  "vocabulary": [
+    {"en": "to break the ice", "fr": "briser la glace", "type": "v.", "example": "A question about the venue is an easy way to break the ice.", "example_fr": "Une question sur le lieu est un moyen simple de briser la glace."},
+    {"en": "to catch up", "fr": "prendre des nouvelles", "type": "v.", "example": "It'd be great to catch up properly over coffee.", "example_fr": "Ce serait bien de prendre le temps d'échanger autour d'un café."},
+    {"en": "commute", "fr": "trajet domicile-travail", "type": "n.", "example": "How's your commute these days?", "example_fr": "Comment se passent tes trajets en ce moment ?"},
+    {"en": "to be based in", "fr": "être basé à", "type": "v.", "example": "I'm based in Paris but I travel a lot.", "example_fr": "Je suis basé à Paris mais je voyage beaucoup."},
+    {"en": "line of work", "fr": "domaine d'activité", "type": "n.", "example": "What line of work are you in?", "example_fr": "Dans quel domaine travaillez-vous ?"},
+    {"en": "mutual contact", "fr": "connaissance commune", "type": "n.", "example": "We have a mutual contact, Nadia Berger.", "example_fr": "Nous avons une connaissance commune, Nadia Berger."},
+    {"en": "to run into someone", "fr": "croiser quelqu'un par hasard", "type": "v.", "example": "I ran into your old boss at the conference.", "example_fr": "J'ai croisé ton ancien patron à la conférence."},
+    {"en": "keynote", "fr": "conférence plénière", "type": "n.", "example": "Did you make it to the keynote?", "example_fr": "Tu as pu assister à la plénière ?"},
+    {"en": "to grab a coffee", "fr": "prendre un café", "type": "v.", "example": "Shall we grab a coffee before the next session?", "example_fr": "On prend un café avant la prochaine session ?"},
+    {"en": "to keep in touch", "fr": "rester en contact", "type": "v.", "example": "Let's keep in touch — I'll send you a LinkedIn request.", "example_fr": "Restons en contact — je vous envoie une invitation LinkedIn."},
+    {"en": "how are you getting on?", "fr": "comment ça se passe ?", "type": "expr.", "example": "How are you getting on with the new tool?", "example_fr": "Comment ça se passe avec le nouvel outil ?"},
+    {"en": "it's been a while", "fr": "ça fait un moment", "type": "expr.", "example": "Good to see you — it's been a while!", "example_fr": "Content de te voir, ça fait un moment !"}
+  ],
+  "phrases": [
+    {"en": "Hi, I don't think we've met. I'm Éric, from Cyborg Consulting.", "fr": "Bonjour, je ne crois pas que nous nous soyons rencontrés. Éric, de Cyborg Consulting.", "context": "Aborder"},
+    {"en": "What brings you here today?", "fr": "Qu'est-ce qui vous amène ici aujourd'hui ?", "context": "Lancer"},
+    {"en": "How did you find the keynote?", "fr": "Comment avez-vous trouvé la plénière ?", "context": "Lancer"},
+    {"en": "Oh really? How does that work in practice?", "fr": "Ah oui ? Comment cela fonctionne-t-il concrètement ?", "context": "Relancer"},
+    {"en": "That's interesting — we had exactly the same problem last year.", "fr": "C'est intéressant, nous avons eu exactement le même problème l'an dernier.", "context": "Rebondir"},
+    {"en": "Sorry, could you say that again? It's quite loud in here.", "fr": "Pardon, pouvez-vous répéter ? Il y a beaucoup de bruit ici.", "context": "Faire répéter"},
+    {"en": "I won't keep you — but it was really good to meet you.", "fr": "Je ne vous retiens pas, mais ce fut un plaisir de vous rencontrer.", "context": "Conclure"},
+    {"en": "Do you have a card? Or shall I find you on LinkedIn?", "fr": "Avez-vous une carte ? Ou je vous retrouve sur LinkedIn ?", "context": "Conclure"},
+    {"en": "Have a good one!", "fr": "Bonne continuation !", "context": "Au revoir"},
+    {"en": "Say hello to the team for me.", "fr": "Salue l'équipe de ma part.", "context": "Au revoir"}
+  ],
+  "dialogue": {
+    "title": "Pause café dans une conférence ITSM",
+    "lines": [
+      {"speaker": "Éric", "en": "Hi, I don't think we've met. I'm Éric, from Cyborg Consulting.", "fr": "Bonjour, je ne crois pas qu'on se soit rencontrés. Éric, de Cyborg Consulting."},
+      {"speaker": "Priya", "en": "Priya, nice to meet you. I head up service operations at Verdant Bank.", "fr": "Priya, enchantée. Je dirige les opérations de service chez Verdant Bank."},
+      {"speaker": "Éric", "en": "Oh, Verdant — I think we have a mutual contact. Do you know Nadia Berger?", "fr": "Ah, Verdant — je crois que nous avons une connaissance commune. Vous connaissez Nadia Berger ?"},
+      {"speaker": "Priya", "en": "Nadia! She sat two desks away from me for three years. Small world.", "fr": "Nadia ! Elle a travaillé à deux bureaux de moi pendant trois ans. Le monde est petit."},
+      {"speaker": "Éric", "en": "It really is. So how did you find the keynote?", "fr": "C'est vrai. Alors, comment avez-vous trouvé la plénière ?"},
+      {"speaker": "Priya", "en": "Honestly? A bit abstract. I was hoping for more on measuring adoption.", "fr": "Honnêtement ? Un peu abstraite. J'espérais davantage sur la mesure de l'adoption."},
+      {"speaker": "Éric", "en": "Same here. That's exactly the problem we're wrestling with — we can deploy anything, but getting people to use it is another story.", "fr": "Moi aussi. C'est exactement le problème sur lequel nous nous débattons : on sait tout déployer, mais faire adopter est une autre histoire."},
+      {"speaker": "Priya", "en": "Tell me about it. How are you getting on with it?", "fr": "À qui le dites-vous. Comment ça se passe de votre côté ?"},
+      {"speaker": "Éric", "en": "Slowly! Look, I won't keep you — the next session's about to start. But it'd be great to catch up properly. Shall I find you on LinkedIn?", "fr": "Lentement ! Écoutez, je ne vous retiens pas, la session suivante va commencer. Mais ce serait bien d'échanger plus longuement. Je vous retrouve sur LinkedIn ?"},
+      {"speaker": "Priya", "en": "Please do. Great to meet you, Éric. Have a good one.", "fr": "Avec plaisir. Ravie de vous avoir rencontré, Éric. Bonne continuation."}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "How do you call this in English?", "right": "What do you call this in English?", "why": "Erreur quasi universelle chez les francophones : on demande la chose (what), pas la manière (how)."},
+    {"wrong": "I am agree, it's the same for me.", "right": "I agree, it's the same for me.", "why": "Agree est un verbe."},
+    {"wrong": "Nice to meet you again.", "right": "Nice to see you again.", "why": "Meet ne s'emploie que pour une première rencontre. Ensuite, c'est see."},
+    {"wrong": "I have 52 years.", "right": "I'm 52.", "why": "L'âge se dit avec be, jamais have."},
+    {"wrong": "Excuse me for disturb you.", "right": "Sorry to bother you.", "why": "Après une préposition, forme en -ing ; et « bother » est plus naturel que « disturb » à l'oral."},
+    {"wrong": "It's a very sympathetic company.", "right": "It's a really nice company to work for.", "why": "Sympathetic = compatissant. « Sympa » n'a pas d'équivalent direct : nice, friendly, lovely."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "Comment demande-t-on le mot anglais pour un objet ?", "options": ["How do you call this?", "What do you call this?", "How is called this?", "Which you call this?"], "answer": 1, "explanation": "What do you call this? — erreur la plus fréquente chez les francophones."},
+    {"type": "mcq", "question": "Vous revoyez quelqu'un rencontré l'an dernier. Vous dites :", "options": ["Nice to meet you again.", "Nice to see you again.", "Nice to know you again.", "Nice to find you again."], "answer": 1, "explanation": "Meet = première rencontre uniquement."},
+    {"type": "gap", "question": "Let's keep in ___ — I'll send you a LinkedIn request.", "answer": "touch", "explanation": "To keep in touch = rester en contact."},
+    {"type": "mcq", "question": "« What line of work are you in? » signifie :", "options": ["Dans quelle file êtes-vous ?", "Dans quel domaine travaillez-vous ?", "Quel est votre poste exact ?", "Depuis quand travaillez-vous ?"], "answer": 1, "explanation": "Manière naturelle et informelle de demander le métier."},
+    {"type": "gap", "question": "Good to see you — it's been a ___!", "answer": "while", "explanation": "It's been a while = ça fait un moment."},
+    {"type": "mcq", "question": "Traduisez « J'ai 52 ans » :", "options": ["I have 52 years.", "I'm 52.", "I have 52 years old.", "I am 52 years."], "answer": 1, "explanation": "L'âge se construit avec be : I'm 52 (years old)."},
+    {"type": "gap", "question": "Sorry to ___ you, do you have two minutes?", "answer": "bother", "explanation": "Sorry to bother you = désolé de vous déranger."}
+  ]
+}

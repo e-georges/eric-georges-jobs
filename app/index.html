@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Application d'apprentissage de l'anglais professionnel : vocabulaire, expressions, dialogues, flashcards à répétition espacée et quiz.">
+<title>English@Work — Anglais professionnel</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇬🇧</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#/">
+      <h1>English<span>@Work</span></h1>
+      <span class="tagline">Anglais professionnel · <!--BUILD_DATE--></span>
+    </a>
+    <div class="topbar-stats" id="topstats"></div>
+  </div>
+</header>
+
+<nav class="tabs"><div class="tabs-inner" id="tabs"></div></nav>
+
+<main id="app">
+  <noscript>
+    <div class="empty">Cette application nécessite JavaScript pour fonctionner.</div>
+  </noscript>
+</main>
+
+<div class="footer">
+  Progression enregistrée localement dans votre navigateur — aucune donnée n'est transmise.
+</div>
+
+<script src="curriculum.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

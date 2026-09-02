@@ -1,0 +1,63 @@
+{
+  "id": "emails",
+  "title": "Emails professionnels",
+  "title_en": "Professional Emails",
+  "icon": "✉️",
+  "level": "A2 → B2",
+  "summary": "Écrire des emails clairs et bien dosés : ouverture, demande, relance, mauvaise nouvelle, clôture.",
+  "vocabulary": [
+    {"en": "attachment", "fr": "pièce jointe", "type": "n.", "example": "Please find the report in the attachment.", "example_fr": "Veuillez trouver le rapport en pièce jointe."},
+    {"en": "to loop someone in", "fr": "mettre quelqu'un dans la boucle", "type": "v.", "example": "I'm looping in Sarah, who owns the budget.", "example_fr": "Je mets Sarah dans la boucle, c'est elle qui gère le budget."},
+    {"en": "to cc someone", "fr": "mettre en copie", "type": "v.", "example": "I've cc'd the account manager for visibility.", "example_fr": "J'ai mis le responsable de compte en copie pour information."},
+    {"en": "heads-up", "fr": "avertissement, info préalable", "type": "n.", "example": "Just a quick heads-up: the server will be down tonight.", "example_fr": "Petite info préalable : le serveur sera indisponible ce soir."},
+    {"en": "at your earliest convenience", "fr": "dès que possible (formel)", "type": "expr.", "example": "Please confirm at your earliest convenience.", "example_fr": "Merci de confirmer dès que possible."},
+    {"en": "to touch on", "fr": "aborder brièvement", "type": "v.", "example": "As we touched on yesterday, the scope has changed.", "example_fr": "Comme nous l'avons brièvement abordé hier, le périmètre a changé."},
+    {"en": "further to", "fr": "suite à", "type": "prep.", "example": "Further to our call, here is the summary.", "example_fr": "Suite à notre appel, voici le récapitulatif."},
+    {"en": "to reach out", "fr": "contacter, solliciter", "type": "v.", "example": "Thanks for reaching out about the vacancy.", "example_fr": "Merci de m'avoir contacté au sujet du poste."},
+    {"en": "kind regards", "fr": "cordialement", "type": "expr.", "example": "Kind regards, Éric", "example_fr": "Cordialement, Éric"},
+    {"en": "to chase (up)", "fr": "relancer", "type": "v.", "example": "I'm just chasing up my email from last week.", "example_fr": "Je relance simplement mon email de la semaine dernière."},
+    {"en": "bandwidth", "fr": "disponibilité, capacité", "type": "n.", "example": "I don't have the bandwidth to take this on before June.", "example_fr": "Je n'ai pas la disponibilité pour prendre cela avant juin."},
+    {"en": "to circle back", "fr": "revenir vers vous", "type": "v.", "example": "Let me check with legal and circle back to you.", "example_fr": "Je vérifie avec le juridique et je reviens vers vous."},
+    {"en": "on hold", "fr": "en suspens, en attente", "type": "expr.", "example": "The project is on hold until the budget is signed off.", "example_fr": "Le projet est en suspens jusqu'à validation du budget."},
+    {"en": "as per", "fr": "conformément à", "type": "prep.", "example": "As per our agreement, invoicing is monthly.", "example_fr": "Conformément à notre accord, la facturation est mensuelle."}
+  ],
+  "phrases": [
+    {"en": "I hope this email finds you well.", "fr": "J'espère que vous allez bien.", "context": "Ouverture neutre"},
+    {"en": "I'm writing to you regarding the December invoice.", "fr": "Je vous écris au sujet de la facture de décembre.", "context": "Objet"},
+    {"en": "Further to our conversation this morning, please find the proposal attached.", "fr": "Suite à notre conversation de ce matin, veuillez trouver la proposition ci-jointe.", "context": "Suivi"},
+    {"en": "Would you be able to send this over by Thursday?", "fr": "Pourriez-vous me l'envoyer d'ici jeudi ?", "context": "Demande polie"},
+    {"en": "Apologies for the delay in getting back to you.", "fr": "Toutes mes excuses pour le retard de ma réponse.", "context": "S'excuser"},
+    {"en": "I'm sorry to say that we won't be able to meet that deadline.", "fr": "Je suis au regret de vous annoncer que nous ne pourrons pas tenir ce délai.", "context": "Mauvaise nouvelle"},
+    {"en": "Just a gentle reminder about my email below.", "fr": "Petit rappel concernant mon email ci-dessous.", "context": "Relance douce"},
+    {"en": "Please let me know if you need anything further.", "fr": "N'hésitez pas si vous avez besoin d'autre chose.", "context": "Clôture"},
+    {"en": "Looking forward to hearing from you.", "fr": "Dans l'attente de votre retour.", "context": "Clôture"},
+    {"en": "Thanks in advance for your help.", "fr": "Merci d'avance pour votre aide.", "context": "Clôture"}
+  ],
+  "dialogue": {
+    "title": "Une relance qui reste courtoise (échange d'emails)",
+    "lines": [
+      {"speaker": "Éric → Client", "en": "Hi Mark, further to our call on Tuesday, I've attached the revised statement of work. The main change is on page 4: the go-live moves to the 28th.", "fr": "Bonjour Mark, suite à notre appel de mardi, je joins le cahier des charges révisé. Le changement principal est en page 4 : la mise en production passe au 28."},
+      {"speaker": "Éric → Client", "en": "Could you confirm you're happy with it by Friday? We'd need your sign-off to book the team.", "fr": "Pourriez-vous confirmer votre accord d'ici vendredi ? Nous aurions besoin de votre validation pour réserver l'équipe."},
+      {"speaker": "Mark → Éric", "en": "Thanks Éric. Legal is reviewing it — I don't have the bandwidth to chase them this week, but I'll circle back on Monday.", "fr": "Merci Éric. Le juridique l'examine — je n'ai pas la disponibilité pour les relancer cette semaine, mais je reviens vers vous lundi."},
+      {"speaker": "Éric → Client", "en": "Understood, thanks for the heads-up. Just so you're aware: if sign-off slips past Wednesday, the 28th becomes tight.", "fr": "Compris, merci de l'information. Sachez simplement que si la validation dépasse mercredi, le 28 devient serré."},
+      {"speaker": "Éric → Client", "en": "I'm looping in Nadia, who manages resourcing, so she can hold the slot provisionally. Kind regards, Éric", "fr": "Je mets Nadia en copie, elle gère l'affectation des ressources et peut réserver le créneau à titre provisoire. Cordialement, Éric"}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "Dear Sir, I am writing you for ask an information.", "right": "Dear Sir or Madam, I am writing to ask for some information.", "why": "Write TO somebody ; to + infinitif pour le but ; information est indénombrable (jamais « an information », jamais « informations »)."},
+    {"wrong": "I wait your answer.", "right": "I look forward to hearing from you.", "why": "« I wait » est brutal et grammaticalement bancal. La formule figée est look forward to + -ing."},
+    {"wrong": "Please find enclosed my CV in attach.", "right": "Please find my CV attached.", "why": "« In attach » n'existe pas. Enclosed s'utilise pour le courrier papier, attached pour l'email."},
+    {"wrong": "I remain at your disposal.", "right": "Please let me know if you need anything else.", "why": "Traduction littérale du français ; « at your disposal » sonne étrange en anglais des affaires moderne."},
+    {"wrong": "I have a doubt about the invoice.", "right": "I have a question about the invoice.", "why": "Doubt = soupçon, méfiance. Dire « I have a doubt » laisse entendre que vous suspectez quelque chose."},
+    {"wrong": "Sensible information", "right": "Sensitive information", "why": "Sensible = raisonnable, sensé. Sensitive = sensible, confidentiel."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "Quelle formule de clôture est correcte dans un email professionnel ?", "options": ["I wait your answer.", "Looking forward to hearing from you.", "I stay at your disposition.", "Waiting you soon."], "answer": 1, "explanation": "Formule standard, chaleureuse sans être familière."},
+    {"type": "mcq", "question": "« Sensitive data » signifie :", "options": ["données raisonnables", "données sensibles", "données ressenties", "données perceptibles"], "answer": 1, "explanation": "Sensitive = sensible/confidentiel. Sensible = raisonnable. Faux ami majeur en IT."},
+    {"type": "gap", "question": "Please find the contract ___ to this email.", "answer": "attached", "explanation": "Attached pour un email ; enclosed pour un courrier papier."},
+    {"type": "gap", "question": "Just a gentle ___ about my message from last week.", "answer": "reminder", "explanation": "« Gentle reminder » = relance douce, très courante."},
+    {"type": "mcq", "question": "Comment dire « Je n'ai pas la disponibilité pour ce projet » ?", "options": ["I don't have the bandwidth for this project.", "I am not disponible for this project.", "I have no time available of this project.", "I miss availability for this project."], "answer": 0, "explanation": "« Bandwidth » au sens de capacité personnelle est très courant en entreprise."},
+    {"type": "mcq", "question": "Combien de pluriels a « information » ?", "options": ["informations", "informations ou information", "aucun : c'est indénombrable", "informationss"], "answer": 2, "explanation": "Indénombrable : on dit some information, a piece of information."},
+    {"type": "gap", "question": "I'm ___ in Sarah so she has full visibility on the budget.", "answer": "looping", "explanation": "To loop someone in = mettre dans la boucle."}
+  ]
+}

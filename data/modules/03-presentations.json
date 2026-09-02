@@ -1,0 +1,64 @@
+{
+  "id": "presentations",
+  "title": "Présentations & pitchs",
+  "title_en": "Presentations & Pitches",
+  "icon": "📊",
+  "level": "B1 → C1",
+  "summary": "Structurer une présentation, commenter des chiffres et un graphique, gérer les questions difficiles.",
+  "vocabulary": [
+    {"en": "outline", "fr": "plan, grandes lignes", "type": "n.", "example": "Let me start with a quick outline of today's talk.", "example_fr": "Je commence par un aperçu rapide du plan."},
+    {"en": "key figures", "fr": "chiffres clés", "type": "n. pl.", "example": "These are the key figures for Q3.", "example_fr": "Voici les chiffres clés du troisième trimestre."},
+    {"en": "to break down", "fr": "détailler, décomposer", "type": "v.", "example": "Let me break down the costs by department.", "example_fr": "Je détaille les coûts par service."},
+    {"en": "trend", "fr": "tendance", "type": "n.", "example": "The overall trend is upward.", "example_fr": "La tendance générale est à la hausse."},
+    {"en": "to level off", "fr": "se stabiliser", "type": "v.", "example": "Costs rose sharply and then levelled off.", "example_fr": "Les coûts ont fortement augmenté puis se sont stabilisés."},
+    {"en": "to plummet", "fr": "chuter brutalement", "type": "v.", "example": "Ticket volumes plummeted after the fix.", "example_fr": "Le volume de tickets a chuté brutalement après le correctif."},
+    {"en": "roughly", "fr": "environ, à peu près", "type": "adv.", "example": "Roughly a third of incidents are password resets.", "example_fr": "Environ un tiers des incidents sont des réinitialisations de mot de passe."},
+    {"en": "bottom line", "fr": "l'essentiel, le résultat net", "type": "n.", "example": "The bottom line: we save 400k a year.", "example_fr": "L'essentiel : nous économisons 400 000 par an."},
+    {"en": "compelling", "fr": "convaincant", "type": "adj.", "example": "That's a compelling business case.", "example_fr": "C'est un dossier convaincant."},
+    {"en": "to walk someone through", "fr": "expliquer pas à pas", "type": "v.", "example": "I'll walk you through the roadmap.", "example_fr": "Je vais vous expliquer la feuille de route pas à pas."},
+    {"en": "handout", "fr": "document distribué", "type": "n.", "example": "There's a handout with all the numbers.", "example_fr": "Un document reprenant tous les chiffres est distribué."},
+    {"en": "to wrap up", "fr": "conclure", "type": "v.", "example": "Let me wrap up with three recommendations.", "example_fr": "Je conclus avec trois recommandations."},
+    {"en": "a rough estimate", "fr": "une estimation approximative", "type": "n.", "example": "At a rough estimate, six months.", "example_fr": "À la louche, six mois."},
+    {"en": "to address a question", "fr": "traiter une question", "type": "v.", "example": "Let me address that in two parts.", "example_fr": "Permettez-moi de traiter cela en deux temps."}
+  ],
+  "phrases": [
+    {"en": "Good morning everyone, and thank you for joining. I'm Éric, and I lead the service management practice.", "fr": "Bonjour à tous, merci de votre présence. Je suis Éric, je dirige le pôle service management.", "context": "Se présenter"},
+    {"en": "I've split today into three parts: where we are, what's blocking us, and what I recommend.", "fr": "J'ai découpé la présentation en trois parties : où nous en sommes, ce qui nous bloque, ce que je recommande.", "context": "Annoncer le plan"},
+    {"en": "If you look at the chart on the left, you'll see a steady increase since March.", "fr": "Si vous regardez le graphique de gauche, vous verrez une hausse régulière depuis mars.", "context": "Commenter un visuel"},
+    {"en": "This bar represents the number of incidents per month.", "fr": "Cette barre représente le nombre d'incidents par mois.", "context": "Commenter un visuel"},
+    {"en": "That brings me to my second point.", "fr": "Cela m'amène à mon deuxième point.", "context": "Transition"},
+    {"en": "To put that into perspective, it's twice the industry average.", "fr": "Pour mettre cela en perspective, c'est le double de la moyenne du secteur.", "context": "Argumenter"},
+    {"en": "That's a great question — let me come back to it at the end.", "fr": "Excellente question — permettez-moi d'y revenir à la fin.", "context": "Gagner du temps"},
+    {"en": "I don't have that figure to hand, but I'll get back to you today.", "fr": "Je n'ai pas ce chiffre sous la main, mais je vous réponds aujourd'hui.", "context": "Ne pas savoir"},
+    {"en": "So, to sum up, the business case pays for itself in eleven months.", "fr": "Donc, en résumé, le projet se rembourse en onze mois.", "context": "Conclure"},
+    {"en": "I'll open the floor to questions.", "fr": "Je laisse la parole aux questions.", "context": "Questions"}
+  ],
+  "dialogue": {
+    "title": "Le moment des questions (Q&A)",
+    "lines": [
+      {"speaker": "Éric", "en": "So, to sum up: automating password resets removes roughly a third of our ticket volume. I'll open the floor to questions.", "fr": "Donc en résumé : automatiser les réinitialisations de mot de passe supprime environ un tiers du volume de tickets. Je laisse la parole aux questions."},
+      {"speaker": "CFO", "en": "You say the payback is eleven months. What's that based on?", "fr": "Vous dites un retour sur investissement en onze mois. Sur quoi cela repose-t-il ?"},
+      {"speaker": "Éric", "en": "Good question. It's based on last year's actual ticket costs, not estimates. The figure is on slide 12 if you'd like the detail.", "fr": "Bonne question. Cela repose sur les coûts réels des tickets de l'an dernier, pas sur des estimations. Le chiffre est en diapositive 12 si vous voulez le détail."},
+      {"speaker": "CFO", "en": "And if adoption is lower than you assume?", "fr": "Et si l'adoption est plus faible que ce que vous supposez ?"},
+      {"speaker": "Éric", "en": "Let me address that in two parts. At half the adoption, payback stretches to about twenty months — still positive. Below that, I'd recommend we stop and reassess.", "fr": "Permettez-moi de traiter cela en deux temps. À la moitié de l'adoption, le retour passe à environ vingt mois — toujours positif. En dessous, je recommanderais de nous arrêter et de réévaluer."},
+      {"speaker": "IT Director", "en": "What about the licence cost in year three?", "fr": "Et le coût de licence en année trois ?"},
+      {"speaker": "Éric", "en": "I don't have that figure to hand, I'm afraid. I'll confirm it by email today. Anything else? Then thank you all for your time.", "fr": "Je n'ai pas ce chiffre sous la main, malheureusement. Je vous le confirme par email aujourd'hui. Autre chose ? Alors merci à tous pour votre temps."}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "I will explain you the results.", "right": "I'll explain the results to you.", "why": "Explain ne prend jamais de complément d'objet indirect nu : explain something TO someone."},
+    {"wrong": "In this graphic we can see...", "right": "In this chart / graph we can see...", "why": "Graphic = illustration, image. Un graphique de données est un chart ou un graph."},
+    {"wrong": "The numbers are very importants.", "right": "The numbers are very significant / large.", "why": "Pas de -s aux adjectifs en anglais ; et important ne signifie pas « élevé, considérable » comme en français."},
+    {"wrong": "I will resume the situation.", "right": "I'll summarise the situation.", "why": "Resume = reprendre (après une pause). Résumer = summarise / sum up."},
+    {"wrong": "It's a 15 minutes presentation.", "right": "It's a 15-minute presentation.", "why": "Adjectif composé : singulier et trait d'union."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "Comment dit-on « Je vais vous expliquer les résultats » ?", "options": ["I will explain you the results.", "I'll explain the results to you.", "I will explain to you the results ones.", "I explain you results."], "answer": 1, "explanation": "Explain something TO someone. Erreur n°1 des francophones."},
+    {"type": "mcq", "question": "« To level off » décrit une courbe qui :", "options": ["chute", "se stabilise", "explose", "repart à la hausse"], "answer": 1, "explanation": "Level off = se stabiliser après une variation."},
+    {"type": "gap", "question": "Ticket volumes ___ after we shipped the fix — down 60% in a week.", "answer": "plummeted", "explanation": "To plummet = chuter brutalement."},
+    {"type": "mcq", "question": "On ne connaît pas la réponse à une question du comité. Que dire ?", "options": ["I don't know.", "I don't have that figure to hand, but I'll get back to you today.", "It's not my job.", "Ask someone else."], "answer": 1, "explanation": "Assumer sans se dévaloriser, puis s'engager sur un délai."},
+    {"type": "gap", "question": "To put that into ___, it's twice the industry average.", "answer": "perspective", "explanation": "To put something into perspective = mettre en perspective."},
+    {"type": "mcq", "question": "Traduisez « résumer » :", "options": ["to resume", "to summarise", "to result", "to abstract"], "answer": 1, "explanation": "To resume = reprendre. Faux ami fréquent en présentation."},
+    {"type": "gap", "question": "Let me ___ up with three recommendations.", "answer": "wrap", "explanation": "To wrap up = conclure."}
+  ]
+}

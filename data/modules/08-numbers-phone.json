@@ -1,0 +1,67 @@
+{
+  "id": "numbers-phone",
+  "title": "Chiffres, dates & téléphone",
+  "title_en": "Numbers, Dates & Phone Calls",
+  "icon": "📞",
+  "level": "A2 → B1",
+  "summary": "Dire correctement les montants, pourcentages et dates, et tenir un appel téléphonique professionnel.",
+  "vocabulary": [
+    {"en": "a quarter", "fr": "un trimestre / un quart", "type": "n.", "example": "Revenue grew 8% in the third quarter.", "example_fr": "Le chiffre d'affaires a progressé de 8 % au troisième trimestre."},
+    {"en": "fiscal year", "fr": "exercice comptable", "type": "n.", "example": "Our fiscal year ends in March.", "example_fr": "Notre exercice se termine en mars."},
+    {"en": "turnover / revenue", "fr": "chiffre d'affaires", "type": "n.", "example": "Turnover was 12 million last year.", "example_fr": "Le chiffre d'affaires était de 12 millions l'an dernier."},
+    {"en": "a rise of / an increase of", "fr": "une hausse de", "type": "n.", "example": "An increase of 15% year on year.", "example_fr": "Une hausse de 15 % en glissement annuel."},
+    {"en": "a drop of / a decrease of", "fr": "une baisse de", "type": "n.", "example": "A drop of two percentage points.", "example_fr": "Une baisse de deux points de pourcentage."},
+    {"en": "roughly / approximately", "fr": "environ", "type": "adv.", "example": "Roughly 3,000 users.", "example_fr": "Environ 3 000 utilisateurs."},
+    {"en": "fortnight", "fr": "quinzaine, deux semaines", "type": "n.", "example": "We meet every fortnight.", "example_fr": "Nous nous réunissons toutes les deux semaines."},
+    {"en": "to hold the line", "fr": "patienter en ligne", "type": "v.", "example": "Could you hold the line a moment?", "example_fr": "Pouvez-vous patienter un instant ?"},
+    {"en": "to put someone through", "fr": "passer quelqu'un (au téléphone)", "type": "v.", "example": "I'll put you through to accounts.", "example_fr": "Je vous passe la comptabilité."},
+    {"en": "to get cut off", "fr": "être coupé", "type": "v.", "example": "Sorry, we got cut off.", "example_fr": "Désolé, nous avons été coupés."},
+    {"en": "to leave a message", "fr": "laisser un message", "type": "v.", "example": "Could I leave a message for her?", "example_fr": "Puis-je lui laisser un message ?"},
+    {"en": "extension", "fr": "poste (téléphonique)", "type": "n.", "example": "You can reach me on extension 4412.", "example_fr": "Vous pouvez me joindre au poste 4412."}
+  ],
+  "phrases": [
+    {"en": "Good morning, Cyborg Consulting, Éric speaking.", "fr": "Bonjour, Cyborg Consulting, Éric à l'appareil.", "context": "Décrocher"},
+    {"en": "Could I speak to Ms Patel, please?", "fr": "Pourrais-je parler à Madame Patel, s'il vous plaît ?", "context": "Appeler"},
+    {"en": "I'm calling about the invoice you sent last week.", "fr": "Je vous appelle au sujet de la facture envoyée la semaine dernière.", "context": "Motif"},
+    {"en": "Sorry, the line's a bit poor — could you speak up?", "fr": "Désolé, la ligne est mauvaise, pouvez-vous parler plus fort ?", "context": "Difficulté"},
+    {"en": "Let me just check — bear with me a second.", "fr": "Laissez-moi vérifier, un instant s'il vous plaît.", "context": "Attente"},
+    {"en": "Could you spell that for me? — B for Bravo, E for Echo.", "fr": "Pouvez-vous me l'épeler ? — B comme Bravo, E comme Echo.", "context": "Épeler"},
+    {"en": "So that's fifteen thousand, four hundred and twenty euros.", "fr": "Cela fait donc quinze mille quatre cent vingt euros.", "context": "Confirmer un montant"},
+    {"en": "Let me read that back to you to be sure.", "fr": "Je vous relis cela pour être sûr.", "context": "Vérifier"},
+    {"en": "I'll email you a confirmation straight after this call.", "fr": "Je vous envoie une confirmation par email juste après cet appel.", "context": "Conclure"},
+    {"en": "Thanks for your time — speak soon.", "fr": "Merci pour votre temps, à bientôt.", "context": "Raccrocher"}
+  ],
+  "dialogue": {
+    "title": "Un appel avec la comptabilité fournisseurs",
+    "lines": [
+      {"speaker": "Receptionist", "en": "Good afternoon, Verdant Bank, how can I help?", "fr": "Bonjour, Verdant Bank, en quoi puis-je vous aider ?"},
+      {"speaker": "Éric", "en": "Hello, this is Éric Georges from Cyborg Consulting. Could I speak to accounts payable, please?", "fr": "Bonjour, Éric Georges de Cyborg Consulting. Pourrais-je parler à la comptabilité fournisseurs, s'il vous plaît ?"},
+      {"speaker": "Receptionist", "en": "Of course. Could you hold the line? I'll put you through.", "fr": "Bien sûr. Pouvez-vous patienter ? Je vous passe le service."},
+      {"speaker": "Accounts", "en": "Accounts payable, Tom speaking.", "fr": "Comptabilité fournisseurs, Tom à l'appareil."},
+      {"speaker": "Éric", "en": "Hi Tom. I'm calling about invoice 2024-118, dated the third of March. It's now sixty days overdue.", "fr": "Bonjour Tom. Je vous appelle au sujet de la facture 2024-118, datée du 3 mars. Elle a maintenant soixante jours de retard."},
+      {"speaker": "Accounts", "en": "Sorry, the line's a bit poor. Could you give me that number again?", "fr": "Désolé, la ligne est mauvaise. Pouvez-vous me redonner ce numéro ?"},
+      {"speaker": "Éric", "en": "Sure. Two-zero-two-four, dash, one-one-eight. The amount is fifteen thousand, four hundred and twenty euros.", "fr": "Bien sûr. Deux-zéro-deux-quatre, tiret, un-un-huit. Le montant est de quinze mille quatre cent vingt euros."},
+      {"speaker": "Accounts", "en": "Bear with me a second… Right, I can see it. It was held because the purchase order number was missing.", "fr": "Un instant s'il vous plaît… Voilà, je la vois. Elle a été bloquée car le numéro de bon de commande manquait."},
+      {"speaker": "Éric", "en": "Ah, that explains it. I'll resend it today with the PO number on it. Could you confirm payment within thirty days once you have it?", "fr": "Ah, cela explique tout. Je la renvoie aujourd'hui avec le numéro de commande. Pouvez-vous confirmer un paiement sous trente jours une fois reçue ?"},
+      {"speaker": "Accounts", "en": "That should be fine. I'll flag it as priority.", "fr": "Cela devrait aller. Je la marque comme prioritaire."},
+      {"speaker": "Éric", "en": "Perfect. I'll email you a confirmation straight after this call. Thanks for your time, Tom — speak soon.", "fr": "Parfait. Je vous envoie une confirmation par email juste après cet appel. Merci pour votre temps, Tom, à bientôt."}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "1,500 = one thousand five hundreds", "right": "one thousand five hundred / fifteen hundred", "why": "Hundred, thousand, million restent invariables quand un chiffre les précède. Le -s n'apparaît que dans « hundreds of people » (des centaines de)."},
+    {"wrong": "3.5 = three comma five", "right": "three point five", "why": "En anglais, le point est le séparateur décimal et la virgule sépare les milliers : 1,500.75."},
+    {"wrong": "The meeting is the 3 March.", "right": "The meeting is on 3 March / on March 3rd.", "why": "Préposition on + date, et ordinal à l'oral : the third of March."},
+    {"wrong": "05/03/2026 lu « 5 March » par un Américain", "right": "Écrire 5 March 2026 en toutes lettres.", "why": "Format britannique = JJ/MM ; américain = MM/JJ. Écrivez le mois en toutes lettres pour éviter tout malentendu."},
+    {"wrong": "We increased of 10%.", "right": "We increased by 10%.", "why": "Increase / decrease / grow + BY pour l'écart, + TO pour la valeur atteinte."},
+    {"wrong": "I have a meeting the next week.", "right": "I have a meeting next week.", "why": "Pas d'article devant next week, last month, this year."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "Comment lit-on 3.5 en anglais ?", "options": ["three comma five", "three point five", "three dot five hundred", "three and five"], "answer": 1, "explanation": "Le point est le séparateur décimal. La virgule sépare les milliers."},
+    {"type": "mcq", "question": "Comment dit-on 1 500 ?", "options": ["one thousand five hundreds", "fifteen hundred", "one thousand and five hundreds", "thousand five hundred"], "answer": 1, "explanation": "« Fifteen hundred » ou « one thousand five hundred ». Hundred reste invariable."},
+    {"type": "mcq", "question": "« Sales increased ___ 12% last year. »", "options": ["of", "by", "at", "with"], "answer": 1, "explanation": "Increase BY + écart. Increase TO + valeur atteinte."},
+    {"type": "gap", "question": "Could you ___ the line while I transfer you?", "answer": "hold", "explanation": "To hold the line = patienter en ligne."},
+    {"type": "mcq", "question": "Au Royaume-Uni, 05/03/2026 signifie :", "options": ["5 mars 2026", "3 mai 2026", "les deux sont possibles", "aucune des deux"], "answer": 0, "explanation": "Format britannique JJ/MM/AAAA. Aux États-Unis ce serait le 3 mai. D'où l'intérêt d'écrire le mois en toutes lettres."},
+    {"type": "gap", "question": "I'll ___ you through to the accounts department.", "answer": "put", "explanation": "To put someone through = passer quelqu'un à un service."},
+    {"type": "mcq", "question": "« A fortnight » correspond à :", "options": ["une nuit", "quatorze jours", "quarante jours", "un mois"], "answer": 1, "explanation": "Fortnight = deux semaines (britannique)."}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "negotiation",
+  "title": "Négociation & relation client",
+  "title_en": "Negotiation & Client Relations",
+  "icon": "🤝",
+  "level": "B2 → C1",
+  "summary": "Poser ses conditions, dire non sans casser la relation, négocier prix, périmètre et délais.",
+  "vocabulary": [
+    {"en": "scope", "fr": "périmètre", "type": "n.", "example": "That request is outside the agreed scope.", "example_fr": "Cette demande sort du périmètre convenu."},
+    {"en": "scope creep", "fr": "dérive du périmètre", "type": "n.", "example": "We need a change process to avoid scope creep.", "example_fr": "Il nous faut un processus de gestion des changements pour éviter la dérive du périmètre."},
+    {"en": "leverage", "fr": "levier, moyen de pression", "type": "n.", "example": "Volume gives us leverage on the price.", "example_fr": "Le volume nous donne un levier sur le prix."},
+    {"en": "trade-off", "fr": "compromis, arbitrage", "type": "n.", "example": "There's a trade-off between speed and quality.", "example_fr": "Il y a un arbitrage entre rapidité et qualité."},
+    {"en": "to push back", "fr": "s'opposer, résister", "type": "v.", "example": "I had to push back on the timeline.", "example_fr": "J'ai dû m'opposer au calendrier proposé."},
+    {"en": "day rate", "fr": "taux journalier (TJM)", "type": "n.", "example": "My day rate is 750 euros excluding VAT.", "example_fr": "Mon TJM est de 750 euros hors taxes."},
+    {"en": "retainer", "fr": "forfait mensuel, provision", "type": "n.", "example": "We could move to a monthly retainer.", "example_fr": "Nous pourrions passer à un forfait mensuel."},
+    {"en": "to sign off on", "fr": "valider formellement", "type": "v.", "example": "Who signs off on the budget?", "example_fr": "Qui valide le budget ?"},
+    {"en": "terms and conditions", "fr": "conditions contractuelles", "type": "n. pl.", "example": "The terms and conditions are non-negotiable.", "example_fr": "Les conditions contractuelles ne sont pas négociables."},
+    {"en": "deliverable", "fr": "livrable", "type": "n.", "example": "There are four deliverables in phase one.", "example_fr": "Il y a quatre livrables en phase un."},
+    {"en": "to meet halfway", "fr": "couper la poire en deux", "type": "v.", "example": "Could we meet halfway at 60 days?", "example_fr": "Pourrions-nous couper la poire en deux à 60 jours ?"},
+    {"en": "value for money", "fr": "rapport qualité-prix", "type": "n.", "example": "They're not the cheapest, but the value for money is excellent.", "example_fr": "Ce ne sont pas les moins chers, mais le rapport qualité-prix est excellent."},
+    {"en": "a sticking point", "fr": "un point de blocage", "type": "n.", "example": "Payment terms are the sticking point.", "example_fr": "Les conditions de paiement sont le point de blocage."},
+    {"en": "to walk away", "fr": "renoncer, quitter la table", "type": "v.", "example": "Below that price, we'd have to walk away.", "example_fr": "En dessous de ce prix, nous devrions renoncer."}
+  ],
+  "phrases": [
+    {"en": "Before we talk numbers, could I check what success looks like for you?", "fr": "Avant de parler chiffres, puis-je vérifier ce qu'est la réussite pour vous ?", "context": "Cadrer"},
+    {"en": "Help me understand the constraint on your side.", "fr": "Aidez-moi à comprendre la contrainte de votre côté.", "context": "Explorer"},
+    {"en": "That's not something I can commit to today.", "fr": "Ce n'est pas quelque chose sur quoi je peux m'engager aujourd'hui.", "context": "Dire non"},
+    {"en": "I can do that, but it would push the delivery date back by two weeks.", "fr": "Je peux le faire, mais cela repousserait la livraison de deux semaines.", "context": "Contrepartie"},
+    {"en": "If you can move on payment terms, I can move on the rate.", "fr": "Si vous bougez sur les conditions de paiement, je peux bouger sur le tarif.", "context": "Échange"},
+    {"en": "Let's be clear about what's in scope and what isn't.", "fr": "Soyons clairs sur ce qui est dans le périmètre et ce qui ne l'est pas.", "context": "Cadrer"},
+    {"en": "I appreciate the constraint, but that rate isn't sustainable for us.", "fr": "Je comprends la contrainte, mais ce tarif n'est pas tenable pour nous.", "context": "Refuser fermement"},
+    {"en": "Where does that leave us?", "fr": "Où cela nous mène-t-il ?", "context": "Relancer"},
+    {"en": "Shall I put that in writing so we're both covered?", "fr": "Je vous mets cela par écrit pour sécuriser les deux parties ?", "context": "Formaliser"},
+    {"en": "I'd rather be upfront: that timeline carries real risk.", "fr": "Je préfère être franc : ce calendrier comporte un vrai risque.", "context": "Transparence"}
+  ],
+  "dialogue": {
+    "title": "Renégocier un TJM et un périmètre",
+    "lines": [
+      {"speaker": "Client", "en": "Éric, we love the proposal, but the budget committee capped us at 600 a day. Can you work with that?", "fr": "Éric, la proposition nous plaît, mais le comité budgétaire nous a plafonnés à 600 par jour. Cela vous convient-il ?"},
+      {"speaker": "Éric", "en": "Thanks for being upfront. Help me understand the constraint — is it the rate itself, or the total envelope?", "fr": "Merci pour votre franchise. Aidez-moi à comprendre la contrainte : est-ce le taux lui-même, ou l'enveloppe globale ?"},
+      {"speaker": "Client", "en": "Honestly, the total. We can't go past 90k this year.", "fr": "Honnêtement, l'enveloppe. Nous ne pouvons pas dépasser 90 000 cette année."},
+      {"speaker": "Éric", "en": "That's useful. Then rather than cutting the rate, let's cut the scope. Phase one at my rate fits inside 90k if we drop the training workshops.", "fr": "C'est utile. Alors plutôt que de baisser le tarif, réduisons le périmètre. La phase un à mon tarif tient dans 90 000 si nous retirons les ateliers de formation."},
+      {"speaker": "Client", "en": "The business really wants the training though.", "fr": "Le métier tient beaucoup à la formation, pourtant."},
+      {"speaker": "Éric", "en": "Understood. Then here's a trade-off: I'll run the training remotely instead of on site. That saves about eight days.", "fr": "Compris. Voici alors un compromis : j'anime la formation à distance plutôt que sur site. Cela économise environ huit jours."},
+      {"speaker": "Client", "en": "That could work. And payment — could you accept 60 days?", "fr": "Cela pourrait marcher. Et le paiement : accepteriez-vous 60 jours ?"},
+      {"speaker": "Éric", "en": "I'd rather be upfront: 60 days is a stretch for a single-person business. If you can do 30, I'll hold the rate for the whole of next year.", "fr": "Je préfère être franc : 60 jours est difficile pour une structure d'une personne. Si vous pouvez faire 30, je gèle mon tarif pour toute l'année prochaine."},
+      {"speaker": "Client", "en": "Let me meet you halfway — 45 days, and you hold the rate.", "fr": "Coupons la poire en deux : 45 jours, et vous gelez votre tarif."},
+      {"speaker": "Éric", "en": "That works for me. Shall I put it in writing so we're both covered?", "fr": "Cela me convient. Je vous mets cela par écrit pour sécuriser les deux parties ?"}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "I am not agree with this price.", "right": "I can't agree to that price.", "why": "Agree est un verbe. Et on agree TO a price, agree WITH a person."},
+    {"wrong": "It's not possible for me.", "right": "That's not something I can commit to.", "why": "« Not possible » ferme la porte. La seconde formule refuse tout en gardant la négociation ouverte."},
+    {"wrong": "We must discuss about the contract.", "right": "We need to discuss the contract.", "why": "Discuss est transitif direct : jamais « discuss about »."},
+    {"wrong": "I demand a higher rate.", "right": "I'm asking for a higher rate.", "why": "Demand = exiger, très agressif. Demander = ask for."},
+    {"wrong": "This price is very interesting.", "right": "This price is very competitive / attractive.", "why": "« Interesting » pour un prix est un calque du français et sonne bizarre."},
+    {"wrong": "I will support the cost.", "right": "I'll cover / bear the cost.", "why": "Support = soutenir, appuyer. Prendre en charge un coût = cover ou bear."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "Comment refuser sans fermer la négociation ?", "options": ["It's not possible.", "That's not something I can commit to today.", "No.", "I am not agree."], "answer": 1, "explanation": "Refus clair mais qui laisse une porte ouverte."},
+    {"type": "gap", "question": "Payment terms are the main ___ point in this deal.", "answer": "sticking", "explanation": "A sticking point = un point de blocage."},
+    {"type": "mcq", "question": "« Scope creep » désigne :", "options": ["un retard de livraison", "l'élargissement progressif et non contrôlé du périmètre", "une baisse de budget", "un changement d'interlocuteur"], "answer": 1, "explanation": "Terme incontournable en gestion de projet et de contrat."},
+    {"type": "mcq", "question": "Quelle phrase est correcte ?", "options": ["We must discuss about the contract.", "We need to discuss the contract.", "We need discuss about contract.", "We must to discuss the contract."], "answer": 1, "explanation": "Discuss est transitif direct, sans preposition."},
+    {"type": "gap", "question": "Could we meet ___ at 45 days?", "answer": "halfway", "explanation": "To meet halfway = couper la poire en deux."},
+    {"type": "mcq", "question": "Traduisez « Je prendrai en charge les frais de déplacement » :", "options": ["I will support the travel costs.", "I'll cover the travel costs.", "I will assume the travel costs.", "I take in charge the travel costs."], "answer": 1, "explanation": "Cover ou bear. « Support » et « take in charge » sont des calques."},
+    {"type": "gap", "question": "There's always a ___-off between speed and quality.", "answer": "trade", "explanation": "Trade-off = arbitrage, compromis."}
+  ]
+}

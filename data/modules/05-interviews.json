@@ -1,0 +1,68 @@
+{
+  "id": "interviews",
+  "title": "Entretiens & carrière",
+  "title_en": "Job Interviews & Career",
+  "icon": "🎯",
+  "level": "B1 → C1",
+  "summary": "Se présenter, raconter son parcours, répondre aux questions pièges et parler salaire.",
+  "vocabulary": [
+    {"en": "background", "fr": "parcours, expérience", "type": "n.", "example": "My background is in IT service management.", "example_fr": "Mon parcours est dans la gestion des services informatiques."},
+    {"en": "track record", "fr": "antécédents, résultats prouvés", "type": "n.", "example": "I have a strong track record of cutting incident volumes.", "example_fr": "J'ai des résultats prouvés en réduction du volume d'incidents."},
+    {"en": "to be responsible for", "fr": "être responsable de", "type": "v.", "example": "I was responsible for a team of twelve.", "example_fr": "J'étais responsable d'une équipe de douze personnes."},
+    {"en": "achievement", "fr": "réalisation, accomplissement", "type": "n.", "example": "My proudest achievement was the ServiceNow rollout.", "example_fr": "Ma réalisation la plus fière a été le déploiement ServiceNow."},
+    {"en": "strengths and weaknesses", "fr": "forces et faiblesses", "type": "n. pl.", "example": "What would you say are your strengths and weaknesses?", "example_fr": "Quelles sont selon vous vos forces et vos faiblesses ?"},
+    {"en": "to line-manage", "fr": "encadrer hiérarchiquement", "type": "v.", "example": "I line-managed five consultants.", "example_fr": "J'encadrais hiérarchiquement cinq consultants."},
+    {"en": "notice period", "fr": "préavis", "type": "n.", "example": "I'm on a three-month notice period.", "example_fr": "J'ai un préavis de trois mois."},
+    {"en": "package", "fr": "rémunération globale", "type": "n.", "example": "What does the package look like?", "example_fr": "À quoi ressemble la rémunération globale ?"},
+    {"en": "to be made redundant", "fr": "être licencié économiquement", "type": "v.", "example": "The whole department was made redundant in 2023.", "example_fr": "Tout le service a été licencié économiquement en 2023."},
+    {"en": "hands-on", "fr": "opérationnel, de terrain", "type": "adj.", "example": "I'm still very hands-on with the tooling.", "example_fr": "Je reste très opérationnel sur l'outillage."},
+    {"en": "to take ownership of", "fr": "prendre en charge, s'approprier", "type": "v.", "example": "I took ownership of the whole migration.", "example_fr": "J'ai pris en charge l'ensemble de la migration."},
+    {"en": "to step up", "fr": "monter en responsabilité", "type": "v.", "example": "I stepped up when the programme manager left.", "example_fr": "J'ai pris le relais quand le directeur de programme est parti."},
+    {"en": "a good fit", "fr": "un bon profil / une bonne adéquation", "type": "n.", "example": "I think I'd be a good fit for this role.", "example_fr": "Je pense que je corresponds bien à ce poste."},
+    {"en": "to be up to speed", "fr": "être opérationnel, à niveau", "type": "expr.", "example": "I'd be up to speed within a month.", "example_fr": "Je serais opérationnel en un mois."}
+  ],
+  "phrases": [
+    {"en": "Thanks for having me. I've been looking forward to this conversation.", "fr": "Merci de me recevoir. J'attendais cet échange avec intérêt.", "context": "Ouverture"},
+    {"en": "I've spent the last fifteen years in IT service management, mostly in banking.", "fr": "J'ai passé les quinze dernières années en gestion des services IT, principalement dans la banque.", "context": "Parcours"},
+    {"en": "In my current role, I'm responsible for the incident and problem processes.", "fr": "Dans mon poste actuel, je suis responsable des processus d'incidents et de problèmes.", "context": "Poste actuel"},
+    {"en": "Let me give you a concrete example.", "fr": "Laissez-moi vous donner un exemple concret.", "context": "Illustrer"},
+    {"en": "The result was a 30% drop in resolution time within six months.", "fr": "Le résultat a été une baisse de 30 % du temps de résolution en six mois.", "context": "Résultat chiffré"},
+    {"en": "I'd say my main development area is delegating earlier.", "fr": "Je dirais que mon principal axe de progrès est de déléguer plus tôt.", "context": "Faiblesse"},
+    {"en": "What I'm looking for now is a role with more strategic scope.", "fr": "Ce que je recherche maintenant, c'est un poste avec une portée plus stratégique.", "context": "Motivation"},
+    {"en": "Could you tell me what success would look like in the first six months?", "fr": "Pourriez-vous me dire à quoi ressemblerait la réussite dans les six premiers mois ?", "context": "Poser des questions"},
+    {"en": "Based on my experience and the market, I'm targeting a range of 85 to 95k.", "fr": "Compte tenu de mon expérience et du marché, je vise une fourchette de 85 à 95 000.", "context": "Salaire"},
+    {"en": "What are the next steps in the process?", "fr": "Quelles sont les prochaines étapes du processus ?", "context": "Clôture"}
+  ],
+  "dialogue": {
+    "title": "Entretien pour un poste de Head of ITSM",
+    "lines": [
+      {"speaker": "Recruiter", "en": "So, Éric — tell me about yourself.", "fr": "Alors, Éric, parlez-moi de vous."},
+      {"speaker": "Éric", "en": "Of course. I've spent the last fifteen years in IT service management, mostly in banking and insurance. For the past four years I've led a team of twelve, running incident, problem and change for around 8,000 users.", "fr": "Bien sûr. J'ai passé les quinze dernières années en gestion des services IT, principalement dans la banque et l'assurance. Ces quatre dernières années, j'ai dirigé une équipe de douze personnes, gérant incidents, problèmes et changements pour environ 8 000 utilisateurs."},
+      {"speaker": "Recruiter", "en": "What would you say is your proudest achievement?", "fr": "Quelle est selon vous votre plus belle réalisation ?"},
+      {"speaker": "Éric", "en": "Let me give you a concrete example. When I joined, the service desk was resolving 40% of tickets at first contact. I redesigned the knowledge base and introduced shift-left training. Within six months we hit 68%.", "fr": "Laissez-moi vous donner un exemple concret. À mon arrivée, le centre de services résolvait 40 % des tickets au premier contact. J'ai refondu la base de connaissances et introduit une formation de type shift-left. En six mois, nous sommes passés à 68 %."},
+      {"speaker": "Recruiter", "en": "And your weaknesses?", "fr": "Et vos faiblesses ?"},
+      {"speaker": "Éric", "en": "I'd say my main development area is delegating earlier. I tend to stay hands-on longer than I should. I've been working on it by handing over one process a quarter.", "fr": "Je dirais que mon principal axe de progrès est de déléguer plus tôt. J'ai tendance à rester opérationnel plus longtemps que nécessaire. J'y travaille en transférant un processus par trimestre."},
+      {"speaker": "Recruiter", "en": "Why are you leaving your current role?", "fr": "Pourquoi quittez-vous votre poste actuel ?"},
+      {"speaker": "Éric", "en": "The role has become largely operational, and what I'm looking for now is more strategic scope — exactly what this position describes.", "fr": "Le poste est devenu largement opérationnel, et ce que je recherche maintenant, c'est une portée plus stratégique — exactement ce que décrit ce poste."},
+      {"speaker": "Recruiter", "en": "Let's talk numbers. What are your salary expectations?", "fr": "Parlons chiffres. Quelles sont vos attentes salariales ?"},
+      {"speaker": "Éric", "en": "Based on my experience and the Paris market, I'm targeting a range of 85 to 95k, depending on the overall package. May I ask what range you have in mind?", "fr": "Compte tenu de mon expérience et du marché parisien, je vise une fourchette de 85 à 95 000, selon la rémunération globale. Puis-je vous demander quelle fourchette vous envisagez ?"}
+    ]
+  },
+  "pitfalls": [
+    {"wrong": "I have 15 years of experiences.", "right": "I have 15 years of experience.", "why": "Experience au sens professionnel est indénombrable. « Experiences » = des expériences vécues, ponctuelles."},
+    {"wrong": "I work here since 2019.", "right": "I've been working here since 2019.", "why": "Une action commencée dans le passé et toujours en cours prend le present perfect, jamais le présent simple."},
+    {"wrong": "I am in charge of 12 persons.", "right": "I'm responsible for a team of 12.", "why": "Le pluriel usuel de person est people. Et « in charge of » s'utilise surtout pour des activités, pas des humains."},
+    {"wrong": "I assisted at the conference.", "right": "I attended the conference.", "why": "Assist = aider. Assister à = attend."},
+    {"wrong": "My actual job is consultant.", "right": "My current job is consultant.", "why": "Actual = réel, véritable. Actuel = current."},
+    {"wrong": "I have a good formation in ITIL.", "right": "I have solid ITIL training / I'm ITIL certified.", "why": "Formation = training. « Formation » en anglais signifie formation militaire ou géologique."}
+  ],
+  "quiz": [
+    {"type": "mcq", "question": "« I ___ here since 2019. »", "options": ["work", "am working", "have been working", "worked"], "answer": 2, "explanation": "Since + present perfect continuous pour une action commencée dans le passé et toujours en cours."},
+    {"type": "mcq", "question": "Traduisez « J'ai 15 ans d'expérience » :", "options": ["I have 15 years of experiences.", "I have 15 years of experience.", "I have 15 years experiences.", "I am 15 years experienced."], "answer": 1, "explanation": "Experience est indénombrable dans ce sens."},
+    {"type": "gap", "question": "I have a strong track ___ of reducing incident volumes.", "answer": "record", "explanation": "Track record = résultats prouvés, antécédents."},
+    {"type": "mcq", "question": "« My actual role » signifie :", "options": ["mon rôle actuel", "mon rôle réel (par opposition à l'affiché)", "mon rôle futur", "mon rôle idéal"], "answer": 1, "explanation": "Actual = réel. Pour « actuel », dire current."},
+    {"type": "gap", "question": "I'm on a three-month ___ period, so I could start in June.", "answer": "notice", "explanation": "Notice period = préavis."},
+    {"type": "mcq", "question": "Le recruteur demande votre salaire souhaité. La meilleure réponse :", "options": ["Whatever you offer is fine.", "Based on my experience and the market, I'm targeting 85 to 95k. What range do you have in mind?", "I don't want to say.", "The maximum possible."], "answer": 1, "explanation": "Fourchette justifiée + renvoi de la question : c'est la pratique standard."},
+    {"type": "gap", "question": "I ___ the conference in Berlin last year — three days of workshops.", "answer": "attended", "explanation": "To attend = assister à. To assist = aider."}
+  ]
+}
